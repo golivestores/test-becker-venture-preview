@@ -51,7 +51,9 @@
 #ixbk8xix1_0 .faq-ticker-status{gap:.7rem;font-size:.92rem}
 #ixbk8xix1_0 .faq-ticker-status:before{width:.5rem;height:.5rem}
 }
-@media(max-width:479px) and (hover:none){
+/* Some mobile browsers report hover capability and keep :hover latched after a tap.
+   On phone layouts, expansion is click-controlled only. */
+@media(max-width:479px){
 #ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned){height:14rem;background:rgba(247,247,245,.96);color:#111;border-color:rgba(0,0,0,.32);transform:none;box-shadow:none}
 #ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned):before{opacity:.35}
 #ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned) .faq-ticker-card__head{height:auto;align-items:start;align-content:start}
