@@ -1,0 +1,118 @@
+/* Small-screen layout and typography adjustments. */
+@media (max-width: 600px) {
+  /* Services: keep the module count on one line and put the scope link below. */
+  #i16lv2od1_0 #i2q7m5357_0 {
+    grid-column: 1 / -1;
+    width: max-content;
+    white-space: nowrap;
+  }
+
+  #i16lv2od1_0 #i2q7m5357_0 .text-block-wrap-div {
+    white-space: nowrap;
+  }
+
+  #i16lv2od1_0 #scope-trigger {
+    position: relative;
+    inset: auto;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: start;
+    margin-top: 1.4rem;
+  }
+
+  #i16lv2od1_0 #i2ffozohy_0,
+  #i16lv2od1_0 #i3lo9paws_0,
+  #i16lv2od1_0 #i2knx9aly_0,
+  #i16lv2od1_0 #i30sacunx_0 {
+    display: none !important;
+  }
+
+  /* Shift list: remove the oversized gaps inherited from the desktop scroll layout. */
+  #i185tv3al_0 #ie09th3pp_0 {
+    row-gap: 4rem;
+  }
+
+  #i185tv3al_0 .scroll-list_card {
+    row-gap: 2rem;
+  }
+
+  /* Core Value: retain the overlay sequence without the oversized empty stage. */
+  #i1ts5jdxa_0 #ieljs5d2v_0 {
+    height: 58vh !important;
+    min-height: 48rem;
+  }
+
+  #i1ts5jdxa_0 #i1jja86x7_0 {
+    height: 130vh !important;
+  }
+
+  #i1ts5jdxa_0 .program_list-item {
+    opacity: var(--mobile-pillar-opacity, 0) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: opacity .18s linear !important;
+  }
+
+  #i1ts5jdxa_0 .program_list-item > .list-item_text {
+    align-self: end !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Portfolio: the divider script uses four columns, so the CSS must too. */
+  #logo-portfolio .logo-grid-item {
+    box-sizing: border-box;
+    flex: 0 0 25% !important;
+    padding: 1.35rem .5rem !important;
+  }
+
+  #logo-portfolio .logo-grid-item img {
+    width: 3.4rem !important;
+    height: 3.4rem !important;
+  }
+
+  /* Reports: put the English introduction before the 01 visual panel. */
+  #i272d12s9_0 .industry-report-shell {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  #i272d12s9_0 .industry-report-head {
+    order: 1;
+    min-height: 28rem;
+    padding: 3rem 2rem 2.5rem;
+  }
+
+  #i272d12s9_0 .industry-report-title {
+    margin-top: 6rem;
+  }
+
+  #i272d12s9_0 .industry-report-intro { order: 2; }
+  #i272d12s9_0 .industry-report-visual {
+    order: 3;
+    min-height: 23rem;
+  }
+
+  #i272d12s9_0 .industry-report-visual-meta,
+  #i272d12s9_0 .industry-report-dot {
+    top: 2.5rem;
+  }
+
+  #i272d12s9_0 .industry-report-visual-word {
+    bottom: 2.5rem;
+  }
+
+  #i272d12s9_0 .industry-report-index { order: 4; }
+
+  /* Match Service Scope body copy to the site's regular mobile body size. */
+  .scope-modal__header > p,
+  .scope-module li {
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .scope-module li {
+    margin-top: 1.2rem !important;
+    padding-left: 1.5rem !important;
+  }
+}

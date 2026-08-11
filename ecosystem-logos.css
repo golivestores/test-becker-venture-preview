@@ -1,0 +1,170 @@
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-carousel {
+  position: relative;
+  height: 72rem;
+  overflow: hidden;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.025);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-track {
+  display: flex;
+  flex-direction: column;
+  animation: ecosystem-logo-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-carousel:hover .ecosystem-logo-track {
+  animation-play-state: paused;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card {
+  min-height: 12rem;
+  padding: 1.6rem 2rem;
+  display: grid;
+  grid-template-columns: 7.5rem 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  color: #eee;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background-color 220ms ease, padding-left 220ms ease;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card:hover {
+  padding-left: 2.6rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-image-wrap {
+  width: 7.5rem;
+  height: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: #fff;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 220ms ease, transform 220ms ease;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card:hover .ecosystem-logo-image {
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-name,
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-handle,
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-arrow {
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-name {
+  margin-bottom: 0.55rem;
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-handle {
+  font-size: 1.05rem;
+  font-weight: 300;
+  opacity: 0.55;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-arrow {
+  font-size: 1.4rem;
+  opacity: 0.45;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card:hover .ecosystem-logo-arrow {
+  opacity: 1;
+  transform: translate(0.3rem, -0.3rem);
+}
+
+@keyframes ecosystem-logo-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@media (max-width: 991px) {
+  #ivypdqi2q_0.ecosystem-logo-ready {
+    overflow: hidden;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i2gi3nrun_0 {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-column: 1 / -1 !important;
+    min-width: 0;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-carousel {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    touch-action: pan-y;
+    overscroll-behavior-x: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 0;
+    border-right: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-track {
+    width: max-content;
+    max-width: none;
+    flex-direction: row;
+    animation-name: ecosystem-logo-scroll-mobile;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card {
+    width: 28rem;
+    min-height: 10rem;
+    grid-template-columns: 6rem 1fr;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-image-wrap {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-arrow { display: none; }
+}
+
+@keyframes ecosystem-logo-scroll-mobile {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 479px) {
+  #ivypdqi2q_0 {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-track {
+    animation: none;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-carousel {
+    overflow: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

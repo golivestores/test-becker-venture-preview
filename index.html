@@ -4,7 +4,12 @@
 <!-- This site was created in Taptop. https://taptop.pro/ -->
 <meta content="Becker Venture" name="generator"> 
 <meta charset="utf-8">
-<script>document.write('<base href="' + (location.hostname.includes('github.io') || location.hostname.includes('golivestores.com') ? '/becker-venture/' : '/') + '">');</script>
+<script>
+  const isPagesHost = location.hostname.includes('github.io') || location.hostname.includes('golivestores.com');
+  const projectPath = location.pathname.split('/').filter(Boolean)[0];
+  const basePath = isPagesHost && projectPath ? `/${projectPath}/` : '/';
+  document.write(`<base href="${basePath}">`);
+</script>
 <meta name="robots" content="all">
 <title>Becker Venture</title>
 <!-- assets.top -->
@@ -56,7 +61,12 @@ WebFont.load({
             <!-- 46b9544ffa2e5e73c3c971fe2ede35a5 -->
             <script src='shared/s3/js/lang/ru.js'></script>
             <script src='shared/s3/js/common.min.js'></script>
-        <link rel="icon" href="favicon.png" type="image/png">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="faq-redesign.css?v=18">
+<link rel="stylesheet" href="industry-report.css?v=4">
+<link rel="stylesheet" href="service-scope.css">
+<link rel="stylesheet" href="ecosystem-logos.css?v=3">
+<link rel="stylesheet" href="mobile-fixes.css?v=10">
 
 <!--s3_require-->
 
@@ -67,7 +77,7 @@ WebFont.load({
 
 
 	<!-- Убрать голубой фон с блок-листа, или любых элементов-->
-<style>* {-webkit-tap-highlight-color: transparent;} .section, footer.section {position: relative; z-index: 1;}</style>
+<style>* {-webkit-tap-highlight-color: transparent;} .section, footer.section {position: relative; z-index: 1;} @media (max-width:479px){#i233edbil_0{top:0!important;z-index:100!important;border-top-left-radius:0!important;border-top-right-radius:0!important;}}</style>
 
 
 
@@ -78,6 +88,58 @@ WebFont.load({
 <!-- mosaic.head.scripts -->
 <!-- Обязательные стили для Safari -->
 <style>
+  /* Preserve whole English words; wrap at spaces and normal punctuation. */
+  .text-block-wrap-div {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* Never split English words into individual letters across the site. */
+  h1, h2, h3, h4, h5, h6, p, li, a, button, .text, .link {
+    overflow-wrap: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+
+  /* Contact labels and addresses must remain intact as complete tokens. */
+  #i29m39c0b_0 .text-block-wrap-div,
+  #i255g86ee_0 .text-block-wrap-div,
+  #ieg8lq2pn_0 .text-block-wrap-div,
+  #igz775spp_0 .text-block-wrap-div,
+  #i2m1oiys7_0,
+  #i37taw5ty_0,
+  #iidpgx37z_0,
+  #id23b5yc1_0 {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: keep-all;
+  }
+
+  /* SplitText animates letters inside an unbreakable word wrapper. */
+  .bv-nowrap-word {
+    display: inline-block !important;
+    white-space: nowrap;
+  }
+
+  #i2xl432il_0 .text-block-wrap-div {
+    white-space: nowrap;
+  }
+
+  #i3lo9paws_0 .price_call-text {
+    align-items: baseline;
+    column-gap: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  #i3lo9paws_0 .price_call-text .text,
+  #i3lo9paws_0 .price_call-text .text-block-wrap-div {
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
   /* Базовые стили Lenis */
   html.lenis {
     height: auto;
@@ -783,7 +845,7 @@ WebFont.load({
 <span class='text-block-wrap-div'>[Core Value]</span>
 </h2>
 <h3 class='text h1 scramble-title' id='i2xl432il_0'>
-<span class='text-block-wrap-div'>Why<br>Becker Venture</span>
+<span class='text-block-wrap-div'>Why<br>Becker&nbsp;Venture</span>
 </h3>
 </div>
 <div class='text text--u-i1f5emyhc text-descrpt' id='i1f5emyhc_0'>
@@ -925,8 +987,12 @@ WebFont.load({
 </h2>
 <div class='div circle div--u-i30sacunx' id='i30sacunx_0'></div>
 <div class='text text-descrpt text--u-i2q7m5357' id='i2q7m5357_0'>
-<span class='text-block-wrap-div'>[5 Core Modules]</span>
+<span class='text-block-wrap-div'>[6 Core Modules]</span>
 </div>
+<button class="scope-trigger" id="scope-trigger" type="button" aria-haspopup="dialog" aria-controls="service-scope-dialog">
+<span class="scope-trigger__label">View Full Scope</span>
+<span class="scope-trigger__icon" aria-hidden="true">↗</span>
+</button>
 <div class='div div--u-i2ffozohy' id='i2ffozohy_0'>
 <div class='div price_tag' id='i39qbyeu7_0'>
 <div class='div circle_big div--u-i2ynxobb8' id='i2ynxobb8_0'></div>
@@ -974,7 +1040,7 @@ WebFont.load({
 <div class='div div--u-i3lo9paws' id='i3lo9paws_0'>
 <div class='div price_call-text div--u-i3jm9dp5t' id='i3jm9dp5t_0'>
 <div class='text h2' id='i24d3vudv_0'>
-<span class='text-block-wrap-div'>/ l </span>
+<span class='text-block-wrap-div'>/</span>
 </div>
 <div class='text h2' id='i1ru1paxw_0'>
 <span class='text-block-wrap-div'>[Advisory]</span>
@@ -982,7 +1048,7 @@ WebFont.load({
 </div>
 <div class='div price_call-text div--u-i1wm2o6y3' id='i1wm2o6y3_0'>
 <div class='text h2' id='i3sg3s7y5_0'>
-<span class='text-block-wrap-div'>/ l</span>
+<span class='text-block-wrap-div'>/</span>
 </div>
 <div class='text h2' id='i1k9ain9m_0'>
 <span class='text-block-wrap-div'>[Venture Studio]</span>
@@ -990,7 +1056,7 @@ WebFont.load({
 </div>
 <div class='div price_call-text div--u-i1okez4es' id='i1okez4es_0'>
 <div class='text h2' id='i2z3c1cjq_0'>
-<span class='text-block-wrap-div'>/ l</span>
+<span class='text-block-wrap-div'>/</span>
 </div>
 <div class='text h2' id='i2v71z8ow_0'>
 <span class='text-block-wrap-div'>[Listing & Trading]</span>
@@ -1263,98 +1329,124 @@ WebFont.load({
 <section class='section section-paddings mt_80' id='logo-portfolio'>
 <div class='container container-base'>
 <div class="container-white" style="border-radius:0.5rem;padding:4rem 2.5rem 5rem;">
-<div class='div padding-block' style="margin-bottom:3rem;">
+<div class='div padding-block portfolio-head' style="margin-bottom:2rem;">
 <h2 class='text text-body opacity_65'><span class='text-block-wrap-div'>[Portfolio]</span></h2>
-<h3 class='text h1 scramble-title'><span class='text-block-wrap-div'>Trusted by Innovators<br>Across Web3</span></h3>
+<h3 class='text h1 scramble-title'><span class='text-block-wrap-div'>BECKER VENTURE</span></h3>
+<p class='text text-body opacity_80 portfolio-intro-copy'><span class="portfolio-copy-desktop">A curated view of the companies, themes, and people we support—highlighting durable businesses, strong teams<br class="portfolio-intro-break"> differentiated products, key milestones, and our long-term collaboration with founders.</span><span class="portfolio-copy-mobile">A curated view of the companies and people we support—highlighting strong teams, differentiated products, and long-term collaboration.</span></p>
 </div>
 <style>
-.logo-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;}
-.logo-grid-item{display:flex;align-items:center;justify-content:center;flex:1 1 calc(100%/6);padding:3.5rem 1rem;position:relative;min-width:0;}
+.logo-grid{display:flex;flex-wrap:wrap;align-items:stretch;}
+/* Saved alternative layout: switch .logo-grid to display:grid with
+   grid-template-columns:repeat(5,minmax(0,1fr)), remove item flex growth,
+   and enable the commented Becker brand tile below for 5 + 5 + 4 + 1. */
+.portfolio-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:0!important;width:100%!important;height:auto!important;min-height:0!important;}
+.portfolio-head>.text{position:relative!important;inset:auto!important;display:block!important;float:none!important;width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important;transform:none!important;}
+.portfolio-head .h1{margin-top:.8rem!important;}
+.portfolio-intro-copy{width:100%!important;max-width:62rem!important;margin:2rem 0 0!important;line-height:1.55!important;text-transform:none!important;}
+.portfolio-copy-mobile{display:none;}
+.logo-grid-item{display:flex;align-items:center;justify-content:center;box-sizing:border-box;flex:1 1 calc(100% / 6);padding:3.5rem 1rem;position:relative;min-width:0;min-height:17rem;border-bottom:1px solid rgba(13,13,13,0.08);text-decoration:none;}
 .logo-grid-item img{width:100px;height:100px;object-fit:contain;opacity:0.45;transition:opacity 0.4s ease,transform 0.3s ease;filter:grayscale(100%);}
 .logo-grid-item:hover img{opacity:1;filter:grayscale(0%);transform:scale(1.1);}
+/* Saved styles for the optional Becker brand tile.
+.logo-grid-item--brand{cursor:default;}
+.logo-grid-item--brand:before{content:"";position:absolute;width:100px;height:100px;background:#111;opacity:0;transition:opacity .3s ease,transform .35s ease;}
+.logo-grid-item--brand img{position:absolute;width:100px;height:100px;z-index:1;opacity:.72;filter:none;transition:opacity .3s ease,transform .35s ease;}
+.logo-grid-item--brand .logo-grid-brand-white{opacity:0;}
+.logo-grid-item--brand:hover:before{opacity:1;transform:scale(1.06);}
+.logo-grid-item--brand:hover .logo-grid-brand-black{opacity:0;transform:scale(.94);}
+.logo-grid-item--brand:hover .logo-grid-brand-white{opacity:1;transform:scale(1.06);}
+*/
 .logo-grid-divider{display:none;}
 .logo-grid-row-divider{width:100%;height:1px;background:rgba(13,13,13,0.08);flex-shrink:0;}
-@media(max-width:479px){.logo-grid-item{flex:1 1 calc(100%/3);padding:2rem 0.5rem;}.logo-grid-item img{width:60px;height:60px;}}
-@media(max-width:479px){.logo-grid-item{padding:1.2rem 1.5rem;}.logo-grid-item img{width:32px;height:32px;}}
+@media(max-width:767px){.logo-grid-item{flex-basis:calc(100% / 3);min-height:10rem;padding:2rem .5rem;}.logo-grid-item img{width:60px;height:60px;}}
+@media(max-width:767px){.portfolio-intro-copy{max-width:100%!important;margin-top:1.6rem!important;}}
+@media(max-width:767px){.portfolio-intro-break{display:none;}}
+@media(max-width:600px){.portfolio-copy-desktop{display:none;}.portfolio-copy-mobile{display:inline;}}
+@media(max-width:479px){.logo-grid-item{min-height:7rem;padding:1.2rem 1.5rem;}.logo-grid-item img{width:32px;height:32px;}}
 </style>
 <div class="logo-grid" id="logoGrid"></div>
 <script>
 (function(){
   var logos=[
-    'imgi_12_DGOwVMhKhfo1jw7E3oXzeVCLgE.png',
-    'imgi_13_1WFu5yZlFIAXZF9Ds5gVO5hEcs.png',
-    'imgi_14_tI1eT82AmmrA5nQRjJXoXEoNk2Q.png',
-    'imgi_15_EkG8yOKo8LwboeArBRlN0iZTfIo.png',
-    'imgi_17_OkXQQDMLQo0AsXV1CIeST03ncWs.png',
-    'imgi_18_nXlDoU7BoIP97rzcGvxE4qqj3E4.png',
-    'imgi_19_IGxYbrq6pSSQgwbp3ssTcmW48Tw.png',
-    'imgi_20_C16JT2E46lfTaOvx5IKERWcOW7k.png',
-    'imgi_21_qmTtTTsKqR4c3ZY1gTjeDby6Sg.png',
-    'imgi_24_5AshECuwV4Ma0lcn2LFTcdE1Q.png',
-    'imgi_25_vXlyNMhvVlnRQkajnskGxTZyS8.png',
-    'imgi_26_w5FoWvVTB27kCfyP2cfu0J7WFlY.png',
-    'imgi_30_OSgfY88soGPpefHbHqPfZ5H4IE.png',
-    'imgi_31_9SKAKR8qWcTkXikqId1mg9k1QO8.png',
-    'imgi_68_hFseeZsJANZncSo24Xt7sUCf8Y.png',
-    'imgi_74_4SGGl2QIfZFTK7MlN8xRK7f9hM.png',
-    'imgi_79_7862uQOLOFQNAEpgGgYoYIPV4s.png',
-    'imgi_82_h9EEjBhapizRElCbReTBjIYWnpQ.png'
+    {name:'KIP Protocol',file:'imgi_12_DGOwVMhKhfo1jw7E3oXzeVCLgE.png',url:'https://www.kip.pro/'},
+    {name:'Mango Network',file:'imgi_15_EkG8yOKo8LwboeArBRlN0iZTfIo.png',url:'https://mangonet.io/'},
+    {name:'Origins Network',file:'imgi_13_1WFu5yZlFIAXZF9Ds5gVO5hEcs.png',url:'https://www.origins.network/'},
+    {name:'ALPHEA',file:'imgi_14_tI1eT82AmmrA5nQRjJXoXEoNk2Q.png',url:'https://www.alphea.ai/'},
+    {name:'AiTraceRoot',file:'imgi_31_9SKAKR8qWcTkXikqId1mg9k1QO8.png',url:'https://aitraceroot.com/'},
+    {name:'ANT.FUN',file:'imgi_25_vXlyNMhvVlnRQkajnskGxTZyS8.png',url:'https://ant.fun/'},
+    {name:'Sportix.AI',file:'imgi_19_IGxYbrq6pSSQgwbp3ssTcmW48Tw.png',url:'https://www.sport-ix.net/en'},
+    {name:'TaiJi',file:'imgi_26_w5FoWvVTB27kCfyP2cfu0J7WFlY.png',url:'https://x.com/TAIJIbsc'},
+    {name:'2U2ai',file:'imgi_21_qmTtTTsKqR4c3ZY1gTjeDby6Sg.png',url:'https://2u2.ai/app/'},
+    {name:'Bullshot',file:'imgi_79_7862uQOLOFQNAEpgGgYoYIPV4s.png',url:'https://bullshot.io/'},
+    {name:'SwarmBase',file:'imgi_24_5AshECuwV4Ma0lcn2LFTcdE1Q.png',url:'https://swarmbase.io/'},
+    {name:'NEXST.AI',file:'imgi_30_OSgfY88soGPpefHbHqPfZ5H4IE.png',url:'https://nexst.io/'},
+    {name:'MarsCat',file:'imgi_74_4SGGl2QIfZFTK7MlN8xRK7f9hM.png',url:'https://marscat.io/'},
+    {name:'Orca',file:'imgi_82_h9EEjBhapizRElCbReTBjIYWnpQ.png',url:'https://www.iorca.xyz/'}
   ];
   var grid=document.getElementById('logoGrid');if(!grid)return;
-  var cols=window.innerWidth<480?4:6;
   logos.forEach(function(logo,i){
-    if(i>0 && i%cols===0){
-      var rowDiv=document.createElement('div');
-      rowDiv.className='logo-grid-row-divider';
-      grid.appendChild(rowDiv);
-    } else if(i>0 && i%cols!==0){
-      var vDiv=document.createElement('div');
-      vDiv.className='logo-grid-divider';
-      grid.appendChild(vDiv);
-    }
-    var item=document.createElement('div');
+    var item=document.createElement('a');
     item.className='logo-grid-item';
+    item.href=logo.url;
+    item.target='_blank';
+    item.rel='noopener noreferrer';
+    item.title=logo.name;
+    item.setAttribute('aria-label',logo.name+' — visit website');
     var img=document.createElement('img');
-    img.src='Becker Ventures logo/'+logo;
-    img.alt='Partner';img.loading='lazy';
+    img.src='Becker Ventures logo/'+logo.file;
+    img.alt=logo.name;img.loading='lazy';
     item.appendChild(img);
     grid.appendChild(item);
   });
+  /* Saved optional 15th tile for the 5 + 5 + 4 + 1 layout.
+  var brand=document.createElement('div');
+  brand.className='logo-grid-item logo-grid-item--brand';
+  brand.setAttribute('aria-label','Becker Venture');
+  var brandBlack=document.createElement('img');
+  brandBlack.className='logo-grid-brand-black';
+  brandBlack.src='logo/BΞCKER Logo纯图形黑标.svg';
+  brandBlack.alt='Becker Venture';
+  var brandWhite=document.createElement('img');
+  brandWhite.className='logo-grid-brand-white';
+  brandWhite.src='logo/BΞCKER Logo纯图形反白.svg';
+  brandWhite.alt='';
+  brandWhite.setAttribute('aria-hidden','true');
+  brand.appendChild(brandBlack);
+  brand.appendChild(brandWhite);
+  grid.appendChild(brand);
+  */
 })();
 </script>
 </div>
 </div>
 </section>
 
-<section class='section section-paddings mt_80 section--u-i272d12s9' id='i272d12s9_0'>
-<div class='container container-base container-white' id='i2mpt3e84_0'>
-<div class='div padding-block div--u-i3slru2v2' id='i3slru2v2_0'>
-<div class='div div--u-i6xo1rq2v' id='i6xo1rq2v_0'></div>
-<div class='div div--u-i3n9v5wnh' id='i3n9v5wnh_0'></div>
-<h2 class='text text-body opacity_65 text--u-iw20gzvct' id='iw20gzvct_0'>
-<span class='text-block-wrap-div'>[Process]</span>
-</h2>
-<h3 class='text h1 text--u-i39d417u6 scramble-title' id='i39d417u6_0'>
-<span class='text-block-wrap-div'>Rebuilding Capital Markets for the Web3 Era</span>
-</h3>
-<div class='div izum_card div--u-i2nobq6h4' id='i2nobq6h4_0'>
-<div class='text text-num tcolor_orange' id='i1a1n0j96_0'>
-<span class='text-block-wrap-div'>01.</span>
-</div>
-<div class='text text-body opacity_80' id='i3hr8lbxj_0'>
-<span class='text-block-wrap-div'>We’re Izum.Study. We’ll get you so fluent in Taptop you’ll out-build Master Yoda with the Force. Real projects, seasoned mentors, zero fluff, tons of practice.</span>
+<section class='section section-paddings mt_80 industry-report-page' id='i272d12s9_0'>
+<div class='container container-base industry-report-shell'>
+<header class='industry-report-head'>
+<div class='industry-report-kicker'>[REPORTS]</div>
+<h2 class='industry-report-title'>BECKER VENTURE<br>INDUSTRY RESEARCH<br>REPORTS</h2>
+</header>
+<div class='industry-report-visual' aria-live='polite'>
+<span class='industry-report-dot' aria-hidden='true'></span>
+<div class='industry-report-visual-meta'><span>[RESEARCH FRAMEWORK]</span><span data-report-visual-index>01 / 05</span></div>
+<div class='industry-report-visual-word'>
+<span data-report-focus-number>01</span>
+<strong data-report-focus-title>WHY / WHAT</strong>
 </div>
 </div>
-<div class='div izum_card div--u-i2bdeexdy' id='i2bdeexdy_0'>
-<div class='text text-num tcolor_orange' id='imjqlnwln_0'>
-<span class='text-block-wrap-div'>02.</span>
-</div>
-<div class='text text-body opacity_80' id='i23qbmj8v_0'>
-<span class='text-block-wrap-div'>With us, you’ll build sites that hit clients like a season-finale twist—no long-winded lectures, just hands-on work, mentor backup, and pro hacks that turn you into a no-code pro in three months.</span>
-</div>
-</div>
-<div class='div circle div--u-i1ia7141d' id='i1ia7141d_0'></div>
-</div>
+<article class='industry-report-intro'>
+<span>[ENGLISH VERSION]</span>
+<p>This page consolidates industry research reports and interim viewpoints produced by <strong>BECKER VENTURE</strong>. It supports investment decisions, product strategy, and go-to-market planning through reusable insights, data, and clearly stated assumptions.</p>
+</article>
+<nav class='industry-report-index' aria-label='Research framework'>
+<div class='industry-report-index-head'><span>[RESEARCH CONTENT]</span><span>01—05</span></div>
+<button class='industry-report-row is-active' type='button' data-report-number='01' data-report-title='WHY / WHAT'><span>01.</span><strong>RESEARCH SCOPE &amp; KEY QUESTIONS</strong><small>WHY / WHAT</small></button>
+<button class='industry-report-row' type='button' data-report-number='02' data-report-title='INSIGHTS'><span>02.</span><strong>KEY FINDINGS &amp; TESTABLE HYPOTHESES</strong><small>INSIGHTS &amp; HYPOTHESES</small></button>
+<button class='industry-report-row' type='button' data-report-number='03' data-report-title='LANDSCAPE'><span>03.</span><strong>MARKET SIZING, GROWTH DRIVERS &amp; COMPETITIVE LANDSCAPE</strong><small>TAM / SAM / SOM</small></button>
+<button class='industry-report-row' type='button' data-report-number='04' data-report-title='BUSINESS MODEL'><span>04.</span><strong>KEY PLAYERS, BUSINESS MODELS &amp; UNIT ECONOMICS</strong><small>BUSINESS MODEL &amp; UNIT ECONOMICS</small></button>
+<button class='industry-report-row' type='button' data-report-number='05' data-report-title='RISKS'><span>05.</span><strong>RISKS, CRITICAL VARIABLES &amp; FOLLOW-UP TRACKING</strong><small>RISKS &amp; TRACKING</small></button>
+</nav>
 </div>
 </section>
 <section class='section section-paddings mt_20 section--u-i1y2waq1b' id='i1y2waq1b_0' style='display:none'>
@@ -2584,6 +2676,8 @@ document.addEventListener("DOMContentLoaded", function () {
   uniform float timeScale;
   uniform vec2 subdivision;
   uniform vec2 mouse;
+  uniform float mouseInfluence;
+  uniform float interactionAge;
   uniform vec3 light;
   uniform vec3 lightColor;
   uniform vec3 mouseLightColor;
@@ -2598,6 +2692,7 @@ document.addEventListener("DOMContentLoaded", function () {
   varying float vFogDepth;
 
   attribute vec3 planePosition;
+  attribute vec3 logoPosition;
   attribute float index;
 
   vec4 calcPerm(vec4 x){return mod(((x*34.0)+1.0)*x,289.0);}
@@ -2715,6 +2810,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   float calcRawNoise(vec3 p){return getSimplex(vec4(p*noiseDensity,time*timeScale));}
   vec3 applyRadNoise(vec3 p){return p*(radius+calcRawNoise(p)*noiseAmplitude);}
+
+  vec3 applyLogoMouseInteraction(vec3 p){
+    vec2 cursor=mouse*0.42;
+    vec2 delta=p.xy-cursor;
+    float dist=length(delta);
+    float field=1.0-smoothstep(0.18,0.92,dist);
+    float grain=calcRawNoise(vec3(p.xy*1.35,time*0.018));
+    float breeze=sin(dist*10.0-time*1.35+grain*1.8)*field*mouseInfluence;
+    vec2 drift=vec2(
+      sin(p.y*3.2+time*0.42),
+      cos(p.x*3.0-time*0.38)
+    );
+    p.xy+=drift*field*mouseInfluence*0.012;
+    p.z+=breeze*0.072+grain*field*mouseInfluence*0.018;
+    return p;
+  }
+
+  float calcLogoSheen(vec3 p){
+    vec2 cursor=mouse*0.42;
+    float local=1.0-smoothstep(0.12,1.05,length(p.xy-cursor));
+    float band=exp(-pow((p.x-cursor.x)*3.8+(p.y-cursor.y)*1.15,2.0)*3.2);
+    float shimmer=0.72+0.28*sin(p.y*19.0-time*2.2);
+    return local*band*shimmer*mouseInfluence;
+  }
   
   float calcLight(vec3 p,vec3 n,vec3 lPos,float str){
     vec3 lDir=normalize(lPos-p);
@@ -2813,6 +2932,42 @@ document.addEventListener("DOMContentLoaded", function () {
     return applyRadNoise(genSph(fm,smp,nm))*sc+rotByNorm(baseN,ang)*dist;
   }
 
+  vec3 calcLogoSingle(inout vec3 nm){
+    nm=vec3(0.0,0.0,1.0);
+    vec3 p=logoPosition*0.72;
+    p.z+=calcRawNoise(vec3(logoPosition.xy,time*0.025))*0.035;
+    return p;
+  }
+
+  vec3 calcLogoDual(inout vec3 nm){
+    nm=vec3(0.0,0.0,1.0);
+    float second=step(SAMPLES*0.5,getVId());
+    float angle=time*0.1+VAL_PI*(0.1+second);
+    vec3 offset=rotByNorm(vec3(0.0,-1.0,-1.6),angle)*1.1;
+    vec3 p=logoPosition*0.34+offset;
+    p.z+=calcRawNoise(vec3(logoPosition.xy,time*0.024))*0.02;
+    return p;
+  }
+
+  vec3 calcLogoTriple(inout vec3 nm){
+    nm=vec3(0.0,0.0,1.0);
+    float group=floor(min(2.0,getVId()/(SAMPLES*0.3333)));
+    float angle=time*0.1+VAL_PI*(0.4+group*0.67);
+    vec3 offset=rotByNorm(vec3(0.0,-1.0,-2.0),angle)*1.15;
+    vec3 p=logoPosition*0.29+offset;
+    p.z+=calcRawNoise(vec3(logoPosition.xy,time*0.022))*0.018;
+    return p;
+  }
+
+  vec3 calcLogoCloud(inout vec3 nm){
+    nm=vec3(0.0,0.0,1.0);
+    vec3 p=logoPosition*0.66;
+    float drift=calcRawNoise(vec3(logoPosition.xy*0.65,time*0.032));
+    p.xy+=normalize(logoPosition.xy+vec2(0.001))*drift*0.1;
+    p.z+=drift*0.07;
+    return p;
+  }
+
   float animToSphere(float m){
     float fi=getVId()/SAMPLES;
     return smoothstep(0.5*fi,0.5+0.5*fi,m);
@@ -2885,16 +3040,18 @@ document.addEventListener("DOMContentLoaded", function () {
     vec3 nm=normal;
     vec3 wPos=planePosition;
     wPos.y-=calcWvField(planePosition)*waveNoiseAmplitude;
-    vec3 sNorm=normal;
-    vec3 sPos=applyRadNoise(genSph(getVId(),SAMPLES,sNorm));
+    vec3 sNorm=vec3(0.0,0.0,1.0);
+    vec3 sPos=logoPosition;
+    sPos.z+=calcRawNoise(vec3(logoPosition.xy,time*0.03))*0.04;
+    sPos=applyLogoMouseInteraction(sPos);
     vec3 mNorm=normal;
-    vec3 mPos=applyRadNoise(genSph(index,SAMPLES,mNorm))*0.5;
+    vec3 mPos=calcLogoSingle(mNorm);
     vec3 dNorm=normal;
-    vec3 dPos=calcDualShape(dNorm);
+    vec3 dPos=calcLogoDual(dNorm);
     vec3 tNorm=normal;
-    vec3 tPos=calcTripleShape(tNorm);
+    vec3 tPos=calcLogoTriple(tNorm);
     vec3 cNorm=normal;
-    vec3 cPos=calcCloud(genSph(index,SAMPLES,cNorm));
+    vec3 cPos=calcLogoCloud(cNorm);
 
     if(morph<animStops[1]){
       float dA=(VAL_PI*2.0)/subdivision.y;
@@ -2910,30 +3067,30 @@ document.addEventListener("DOMContentLoaded", function () {
       float f=pow(smoothstep(animStops[1],animStops[2],morph),13.0);
       tr=mixPoints(sPos,mPos,mPos,f);
       nm=mixPoints(sNorm,mNorm,mNorm,f);
-      pSz=mix(size,size*0.5,f);
+      pSz=size*0.72;
     } else if(morph<animStops[3]){
       float f=pow(smoothstep(animStops[2],animStops[3],morph),13.0);
       tr=mixPoints(mPos,cPos,dPos,f);
       nm=mix(mNorm,dNorm,f);
-      pSz=mix(size*0.5,size*0.75,f);
+      pSz=mix(size*0.72,size*0.68,f);
     } else if(morph<animStops[4]){
       float f=pow(smoothstep(animStops[3],animStops[4],morph),5.0);
       tr=mixPoints(dPos,cPos,tPos,f);
       nm=mix(dNorm,tNorm,f);
-      pSz=mix(size*0.75,size,f);
+      pSz=mix(size*0.68,size*0.64,f);
     } else if(morph<animStops[7]){
       tr=tPos;
       nm=tNorm;
-      pSz=size;
+      pSz=size*0.64;
     } else if(morph<animStops[8]){
       float f=animMrph(smoothstep(animStops[7],animStops[8],morph));
       tr=mixPoints(tPos,cPos,sPos,f);
       nm=mix(tNorm,sNorm,f);
-      pSz=size;
+      pSz=mix(size*0.64,size*0.72,f);
     } else if(morph<animStops[10]){
       tr=sPos;
       nm=sNorm;
-      pSz=size;
+      pSz=size*0.72;
     } else {
       tr=vec3(1.);
       pSz=0.01;
@@ -2952,12 +3109,35 @@ document.addEventListener("DOMContentLoaded", function () {
     vColor=mix(col,colorOut,clamp(pow(1.-fadeOut,5.5),0.,1.));
     vColor+=mouseLightColor*calcLight(mvP.xyz,oNorm,light,5.0);
     vColor+=lightColor*calcLight(mvP.xyz,oNorm,vec3(0.,-3.,-5.),10.0);
+    float logoStage=smoothstep(animStops[0],animStops[1],morph);
+    float densitySeed=fract(sin(getVId()*12.9898)*43758.5453);
+    float brightnessSeed=step(0.7,fract(sin((getVId()+17.0)*78.233)*43758.5453));
+    float logoParticleVisible=step(0.2,densitySeed);
+    float logoSheen=calcLogoSheen(logoPosition)*logoStage;
+    float logoTone=mix(0.88,1.0,brightnessSeed);
+    float stageBrightness=1.0;
+    if(morph>=animStops[2]&&morph<animStops[3]){
+      float stageMix=pow(smoothstep(animStops[2],animStops[3],morph),13.0);
+      stageBrightness=mix(1.0,0.98,stageMix);
+    } else if(morph>=animStops[3]&&morph<animStops[4]){
+      float stageMix=pow(smoothstep(animStops[3],animStops[4],morph),5.0);
+      stageBrightness=mix(0.98,0.95,stageMix);
+    } else if(morph>=animStops[4]&&morph<animStops[7]){
+      stageBrightness=0.95;
+    } else if(morph>=animStops[7]&&morph<animStops[8]){
+      float stageMix=animMrph(smoothstep(animStops[7],animStops[8],morph));
+      stageBrightness=mix(0.95,1.0,stageMix);
+    }
+    vColor*=mix(1.0,logoTone*stageBrightness,logoStage);
+    vColor+=vec3(0.82,0.88,1.0)*logoSheen*0.72;
     float sX=gl_Position.x/gl_Position.w;
     vColor=calcRefl(vColor,sX,tr.z/objectSize.z,tr);
     vec4 mvPos=vec4(tr,1.0);
     mvPos=modelViewMatrix*mvPos;
     gl_Position=projectionMatrix*mvPos;
     gl_PointSize=pSz*mix(1.,fadeOutMaxSize,1.-fadeOut)*modelScale;
+    gl_PointSize*=mix(1.0,0.85*logoParticleVisible,logoStage);
+    gl_PointSize*=1.0+logoSheen*0.32;
     #ifdef USE_SIZEATTENUATION
       bool isP=checkPersp(projectionMatrix);
       if(isP) gl_PointSize*=(scale/-mvPos.z);
@@ -2984,9 +3164,50 @@ function getSvh() {
   return svhHeight;
 }
 
-const init3dApp = () => {
+async function createLogoPointPositions(count) {
+  const image = new Image();
+  image.src = "logo.svg";
+  await image.decode();
+
+  const sampleSize = 420;
+  const sampleCanvas = document.createElement("canvas");
+  sampleCanvas.width = sampleSize;
+  sampleCanvas.height = sampleSize;
+  const sampleContext = sampleCanvas.getContext("2d", { willReadFrequently: true });
+  const padding = 22;
+  sampleContext.drawImage(image, padding, padding, sampleSize - padding * 2, sampleSize - padding * 2);
+  const pixels = sampleContext.getImageData(0, 0, sampleSize, sampleSize).data;
+  const opaquePoints = [];
+
+  for (let y = 0; y < sampleSize; y += 2) {
+    for (let x = 0; x < sampleSize; x += 2) {
+      if (pixels[(y * sampleSize + x) * 4 + 3] > 96) {
+        opaquePoints.push([x, y]);
+      }
+    }
+  }
+
+  const positions = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const source = opaquePoints[Math.floor(Math.random() * opaquePoints.length)];
+    const jitterX = (Math.random() - 0.5) * 2;
+    const jitterY = (Math.random() - 0.5) * 2;
+    const normalizedX = (source[0] + jitterX) / sampleSize - 0.5;
+    const normalizedY = 0.5 - (source[1] + jitterY) / sampleSize;
+    const radialDepth = 1 - Math.min(1, Math.hypot(normalizedX, normalizedY) * 1.7);
+
+    positions[i * 3] = normalizedX * 4.15;
+    positions[i * 3 + 1] = normalizedY * 4.15;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 0.12 + radialDepth * 0.12;
+  }
+
+  return positions;
+}
+
+const init3dApp = async () => {
   const POINTS_COUNT = 10000;
   const svhHeight = getSvh();
+  const logoPointPositions = await createLogoPointPositions(POINTS_COUNT);
 
   function getSphereGeometry() {
     // Создаём BufferGeometry
@@ -3008,6 +3229,7 @@ const init3dApp = () => {
 
     // Добавляем атрибут в геометрию
     geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute("logoPosition", new THREE.BufferAttribute(logoPointPositions, 3));
     geometry.setAttribute("index", new THREE.BufferAttribute(indexes, 1));
     return geometry;
   }
@@ -3099,6 +3321,8 @@ const init3dApp = () => {
     planeToSphereMorph: { value: 0 },
     mouse: { value: [0, 0] },
     mouseAnimated: { value: [0, 0] },
+    mouseInfluence: { value: 0 },
+    interactionAge: { value: 99 },
     scrollY: { value: window.scrollY },
     light: { value: [0, 0, 0] },
     pointSize: { value: 0.04 },
@@ -3314,6 +3538,8 @@ const init3dApp = () => {
         modelScale: { value: this.getScale() },
         mouse: gu.mouse,
         mouseAnimated: gu.mouseAnimated,
+        mouseInfluence: gu.mouseInfluence,
+        interactionAge: gu.interactionAge,
         light: gu.light,
         mouseLightColor: gu.mouseLightColor,
         radius: { value: 2 },
@@ -3405,11 +3631,14 @@ const init3dApp = () => {
     });
   };
 
+  let lastLogoInteraction = -100;
+
   window.addEventListener("mousemove", (e) => {
     const x = (e.clientX / window.innerWidth - 0.5) * 10;
     const y = -(e.clientY / svhHeight - 0.5) * 10;
 
     gu.mouse.value = [x, y];
+    lastLogoInteraction = performance.now() * 0.001;
   });
 
   const camera = new THREE.PerspectiveCamera(
@@ -3499,16 +3728,21 @@ const init3dApp = () => {
     });
 
     if (isMobile()) {
-      const canvasRoot = document.querySelector("#i6j0s7y68_0");
+      const canvasRoot = document.querySelector("#i6j0s7y68_0") || document.querySelector("#i3s7itiep_0");
+      if (!canvasRoot) {
+        canvas.style.display = "none";
+        updateSpheresRotation();
+        return;
+      }
       const canvasRootRect = canvasRoot.getBoundingClientRect();
 
       const oneTwoThreeAnim = document.querySelector(".one-anim").parentElement;
       const oneTwoThreeAnimRect = oneTwoThreeAnim.getBoundingClientRect();
 
-      const aboutAnim = document.querySelector("#igbr3psoe_0");
-      const aboutAnimRect = aboutAnim.getBoundingClientRect();
+      const aboutAnim = document.querySelector("#igbr3psoe_0") || document.querySelector("#i1gotoyt4_0");
+      const aboutAnimRect = aboutAnim ? aboutAnim.getBoundingClientRect() : null;
 
-      if (aboutAnimRect.top - window.innerHeight < window.innerHeight) {
+      if (aboutAnimRect && aboutAnimRect.height > 0 && aboutAnimRect.top - window.innerHeight < window.innerHeight) {
         if (canvas.parentElement !== aboutAnim) {
           aboutAnim.appendChild(canvas);
 
@@ -3548,6 +3782,12 @@ const init3dApp = () => {
   function animate() {
     const delta = clock.getDelta(); // время в секундах с прошлого кадра
     gu.time.value += delta * anim.speed;
+    const interactionNow = performance.now() * 0.001;
+    const interactionAge = Math.max(0, interactionNow - lastLogoInteraction);
+    const interactionTarget = interactionAge < 0.09 ? 1 : 0;
+    const interactionEase = interactionTarget > gu.mouseInfluence.value ? 0.34 : 0.045;
+    gu.mouseInfluence.value += (interactionTarget - gu.mouseInfluence.value) * interactionEase;
+    gu.interactionAge.value = interactionAge;
     requestAnimationFrame(animate);
 
     if (renderIsPaused) {
@@ -3763,7 +4003,8 @@ setTimeout(
 
       // 2) Разбиваем текст элемента на строки и символы
       const split = SplitText.create(el, {
-        type: 'lines, chars' // разбиваем на строки и символы
+        type: 'lines, words, chars', // keep word wrappers while animating characters
+        wordsClass: 'bv-nowrap-word'
       });
 
       const lines = split.lines; // массив строк
@@ -3840,9 +4081,49 @@ setTimeout(
 <!-- /mosaic.footer.scripts -->	
 
 
+<!-- Service Scope modal -->
+<div class="scope-modal" id="service-scope-modal" aria-hidden="true">
+  <div class="scope-modal__backdrop" data-scope-close></div>
+  <section class="scope-modal__panel" id="service-scope-dialog" role="dialog" aria-modal="true" aria-labelledby="scope-title" tabindex="-1" data-lenis-prevent data-lenis-prevent-wheel data-lenis-prevent-touch>
+    <header class="scope-modal__header">
+      <div class="scope-modal__eyebrow">[BECKER VENTURE / WEB3]</div>
+      <button class="scope-modal__close" type="button" data-scope-close aria-label="Close service scope"><span>Close</span><span aria-hidden="true">×</span></button>
+      <h2 id="scope-title">Service<br>Scope</h2>
+      <p>We support Web3 teams across the full lifecycle—from early incubation to growth, fundraising, and exchange listing readiness—combining strategic guidance with hands-on execution.</p>
+      <div class="scope-modal__meta" aria-hidden="true"><span>FULL LIFECYCLE SUPPORT</span><span>06 MODULES</span></div>
+    </header>
+    <div class="scope-modal__content">
+      <article class="scope-module"><div class="scope-module__num">[01]</div><div><h3>Incubation &amp;<br>Venture Building</h3><ul>
+        <li>Ideation refinement, product positioning, and narrative development</li><li>Token / protocol design support, including high-level design review and specialist coordination</li><li>Team formation guidance and hiring priorities across core dev, BD, community, and operations</li><li>Go-to-market planning: target users, distribution channels, and growth loops</li><li>Milestone planning and operating cadence: OKRs, weekly execution rhythm, and KPI dashboards</li>
+      </ul></div></article>
+      <article class="scope-module"><div class="scope-module__num">[02]</div><div><h3>Fundraising Strategy &amp;<br>Financing Plan</h3><ul>
+        <li>Funding roadmap across pre-seed, seed, private rounds, and strategic vs. financial investors</li><li>Deal structuring guidance for token rounds, equity, SAFE / SAFT, in collaboration with legal partners</li><li>Pitch support: deck strategy, storyline, metrics, and data room preparation</li><li>Investor targeting and warm introductions to relevant funds, angels, and strategic partners</li><li>Term negotiation support: valuation, unlock / vesting logic, and governance considerations</li>
+      </ul></div></article>
+      <article class="scope-module"><div class="scope-module__num">[03]</div><div><h3>Exchange Listing<br>Strategy &amp; Execution</h3><ul>
+        <li>Listing readiness: compliance posture, token distribution, liquidity design, and market-making needs</li><li>Listing plan: timeline, DEX / CEX sequencing, and regional strategy</li><li>Exchange package preparation: documentation, traction proof, risk disclosure, and communications</li><li>Coordination across market makers, liquidity providers, PR, and advisory networks</li><li>Post-listing support: liquidity monitoring, community cadence, and narrative stabilization</li>
+      </ul></div></article>
+      <article class="scope-module"><div class="scope-module__num">[04]</div><div><h3>Brand, Marketing<br>&amp; Community</h3><ul>
+        <li>Brand strategy: positioning, identity, messaging pillars, and tone of voice</li><li>Content strategy spanning thought leadership, announcements, launches, and ecosystem storytelling</li><li>Discord / Telegram structure, community programs, and ambassador strategy</li><li>X (Twitter) growth strategy, campaign planning, and performance tracking</li><li>PR and partner-marketing coordination with external agencies when needed</li>
+      </ul></div></article>
+      <article class="scope-module"><div class="scope-module__num">[05]</div><div><h3>Business Development &amp;<br>Ecosystem Partnerships</h3><ul>
+        <li>Strategic partnerships with L1 / L2 ecosystems, infrastructure partners, exchanges, wallets, and dApps</li><li>Go-to-market collaborations: co-marketing, integrations, and distribution partnerships</li><li>Enterprise and institutional business-development support where relevant</li><li>Advisor network access across technical, legal, compliance, and market making</li>
+      </ul></div></article>
+      <article class="scope-module"><div class="scope-module__num">[06]</div><div><h3>Operations, Governance<br>&amp; Long-Term Support</h3><ul>
+        <li>Operating model setup: budgeting, treasury policy, and reporting cadence</li><li>Governance planning: DAO framework considerations and community governance design, as applicable</li><li>Risk management: security coordination, incident response planning, and communications process</li><li>Ongoing strategic support for launches, upgrades, and new-market entry</li>
+      </ul></div></article>
+    </div>
+    <footer class="scope-modal__footer"><span>[END OF SCOPE]</span><a href="mailto:contact@beckerventure.com">Discuss Your Project <span aria-hidden="true">↗</span></a></footer>
+  </section>
+</div>
+
 <!-- assets.bottom -->
 <!-- </noscript></script></style> -->
 <script src="my/s3/js/site.min.js?1776070719" ></script>
+<script src="service-scope.js"></script>
+<script src="faq-redesign.js?v=11"></script>
+<script src="ecosystem-logos.js"></script>
+<script src="industry-report.js?v=2"></script>
+<script src="mobile-fixes.js?v=4"></script>
 <script >/*<![CDATA[*/
 </script>
 <script >/*<![CDATA[*/
