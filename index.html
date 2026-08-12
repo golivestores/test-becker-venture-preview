@@ -62,11 +62,11 @@ WebFont.load({
             <script src='shared/s3/js/lang/ru.js'></script>
             <script src='shared/s3/js/common.min.js'></script>
 <link rel="icon" href="favicon.png" type="image/png">
-<link rel="stylesheet" href="faq-redesign.css?v=19">
+<link rel="stylesheet" href="faq-redesign.css?v=23">
 <link rel="stylesheet" href="industry-report.css?v=4">
 <link rel="stylesheet" href="service-scope.css">
-<link rel="stylesheet" href="ecosystem-logos.css?v=3">
-<link rel="stylesheet" href="mobile-fixes.css?v=10">
+<link rel="stylesheet" href="ecosystem-logos.css?v=10">
+<link rel="stylesheet" href="mobile-fixes.css?v=12">
 
 <!--s3_require-->
 
@@ -77,7 +77,7 @@ WebFont.load({
 
 
 	<!-- Убрать голубой фон с блок-листа, или любых элементов-->
-<style>* {-webkit-tap-highlight-color: transparent;} .section, footer.section {position: relative; z-index: 1;} @media (max-width:479px){#i233edbil_0{top:0!important;z-index:100!important;border-top-left-radius:0!important;border-top-right-radius:0!important;}}</style>
+<style>* {-webkit-tap-highlight-color: transparent;} .section, footer.section {position: relative; z-index: 1;}</style>
 
 
 
@@ -3739,17 +3739,52 @@ const init3dApp = async () => {
       const oneTwoThreeAnim = document.querySelector(".one-anim").parentElement;
       const oneTwoThreeAnimRect = oneTwoThreeAnim.getBoundingClientRect();
 
-      const aboutAnim = document.querySelector("#igbr3psoe_0") || document.querySelector("#i1gotoyt4_0");
+      const aboutAnim = document.querySelector("#ivypdqi2q_0");
       const aboutAnimRect = aboutAnim ? aboutAnim.getBoundingClientRect() : null;
+      const aboutNextSection = aboutAnim ? aboutAnim.nextElementSibling : null;
+      const aboutNextRect = aboutNextSection ? aboutNextSection.getBoundingClientRect() : null;
+      // The rebuilt mobile Ecosystem section can retain source-page height
+      // beyond its visible black panel. Treat the next section's top as the
+      // real visual boundary so particles never bleed onto Portfolio.
+      const ecosystemVisualBottom = aboutNextRect
+        ? Math.min(aboutAnimRect.bottom, aboutNextRect.top)
+        : (aboutAnimRect ? aboutAnimRect.bottom : -Infinity);
+      const ecosystemIsActive = aboutAnimRect &&
+        aboutAnimRect.height > 0 &&
+        aboutAnimRect.top < svhHeight * 0.72 &&
+        ecosystemVisualBottom > svhHeight * 0.34;
 
-      if (aboutAnimRect && aboutAnimRect.height > 0 && aboutAnimRect.top - window.innerHeight < window.innerHeight) {
-        if (canvas.parentElement !== aboutAnim) {
-          aboutAnim.appendChild(canvas);
-
-          canvas.style.position = "absolute";
-          canvas.style.top = `${Math.floor(-svhHeight * 0.1)}px`;
-          canvas.style.left = `${-aboutAnimRect.left}px`;
+      if (ecosystemIsActive) {
+        if (canvas.parentElement !== document.body) {
+          document.body.appendChild(canvas);
         }
+
+        // On mobile the particle object follows the viewport while the
+        // Ecosystem section passes behind it. This preserves the original
+        // continuous-canvas feeling without restoring the old 400vh spacer.
+        canvas.style.position = "fixed";
+        canvas.style.top = "0";
+        canvas.style.left = "0";
+        canvas.style.zIndex = "1";
+        canvas.style.pointerEvents = "none";
+
+        const entry = THREE.MathUtils.clamp(
+          (svhHeight * 0.72 - aboutAnimRect.top) / (svhHeight * 0.22),
+          0,
+          1
+        );
+        const exit = THREE.MathUtils.clamp(
+          (ecosystemVisualBottom - svhHeight * 0.34) / (svhHeight * 0.22),
+          0,
+          1
+        );
+        canvas.style.opacity = String(Math.min(entry, exit));
+        canvas.style.display = "block";
+      } else if (aboutAnimRect && ecosystemVisualBottom <= svhHeight * 0.34) {
+        // Once Portfolio approaches, fade the global particle layer out so it
+        // cannot sit over the following white section.
+        canvas.style.opacity = "0";
+        canvas.style.display = "none";
       } else if (oneTwoThreeAnimRect.top - window.innerHeight < window.innerHeight) {
         if (canvas.parentElement !== oneTwoThreeAnim) {
           oneTwoThreeAnim.appendChild(canvas);
@@ -3757,6 +3792,9 @@ const init3dApp = async () => {
           canvas.style.position = "absolute";
           canvas.style.top = `${Math.floor(svhHeight * 0.08)}px`;
           canvas.style.left = `${-oneTwoThreeAnimRect.left}px`;
+          canvas.style.zIndex = "0";
+          canvas.style.opacity = "1";
+          canvas.style.display = "block";
         }
       } else {
         if (canvas.parentElement !== canvasRoot) {
@@ -3766,6 +3804,9 @@ const init3dApp = async () => {
         canvas.style.position = "absolute";
         canvas.style.top = "-10svh";
         canvas.style.left = `${-canvasRootRect.left}px`;
+        canvas.style.zIndex = "0";
+        canvas.style.opacity = "1";
+        canvas.style.display = "block";
       }
     }
 
@@ -4120,8 +4161,8 @@ setTimeout(
 <!-- </noscript></script></style> -->
 <script src="my/s3/js/site.min.js?1776070719" ></script>
 <script src="service-scope.js"></script>
-<script src="faq-redesign.js?v=11"></script>
-<script src="ecosystem-logos.js"></script>
+<script src="faq-redesign.js?v=19"></script>
+<script src="ecosystem-logos.js?v=3"></script>
 <script src="industry-report.js?v=2"></script>
 <script src="mobile-fixes.js?v=4"></script>
 <script >/*<![CDATA[*/

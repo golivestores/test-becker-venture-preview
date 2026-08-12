@@ -94,6 +94,12 @@
   transform: translate(0.3rem, -0.3rem);
 }
 
+/* The third copy is reserved for the mobile seamless loop. Desktop keeps
+   the original two-copy vertical marquee geometry. */
+#ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card:nth-child(n + 13) {
+  display: none;
+}
+
 @keyframes ecosystem-logo-scroll {
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
@@ -152,9 +158,193 @@
 }
 
 @media (max-width: 479px) {
-  #ivypdqi2q_0 {
-    display: none !important;
+  #ivypdqi2q_0.ecosystem-logo-ready {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
   }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i2pl80u8h_0,
+  #ivypdqi2q_0.ecosystem-logo-ready #i1gotoyt4_0 {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i2pl80u8h_0 {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  /* The source page uses this 400vh spacer to drive its old sphere/cards
+     scroll animation. Our mobile partner carousel no longer uses that
+     timeline, so retaining it only creates a blank multi-screen gap. */
+  #ivypdqi2q_0.ecosystem-logo-ready #i370ginle_0 {
+    display: none !important;
+    height: 0 !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i1gotoyt4_0 {
+    position: relative !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i3dzatwuv_0 {
+    position: relative !important;
+    z-index: 4;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding-bottom: 3rem !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i21molahb_0,
+  #ivypdqi2q_0.ecosystem-logo-ready #i30xgzvfr_0 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i30xgzvfr_0 {
+    font-size: 3.55rem !important;
+    line-height: 1.02 !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready #i2gi3nrun_0 {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 4;
+    display: block !important;
+    width: 100% !important;
+    margin-top: 8rem !important;
+    min-height: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    /* The source section animates this whole element 35rem sideways on
+       mobile. After it is replaced by our partner carousel that transform
+       would move the complete carousel outside the viewport. */
+    transform: none !important;
+    translate: none !important;
+    animation: none !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-carousel {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: 14.8rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    translate: none !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 2.6rem;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    padding: 1.2rem 2.6rem !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    background: transparent !important;
+    border: 0 !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-track {
+    display: flex !important;
+    flex-direction: row !important;
+    width: max-content !important;
+    gap: .85rem !important;
+    padding: 0 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card {
+    position: relative;
+    flex: 0 0 min(70vw, 27.5rem) !important;
+    width: min(70vw, 27.5rem) !important;
+    min-height: 12.2rem !important;
+    padding: 1.4rem 1.5rem !important;
+    grid-template-columns: 5.8rem minmax(0, 1fr) !important;
+    gap: 1.2rem !important;
+    background: #303033 !important;
+    border: 1px solid rgba(255, 255, 255, .18) !important;
+    scroll-snap-align: center;
+    overflow: hidden;
+    opacity: .72;
+    filter: brightness(.78);
+    transform: scale(.97);
+    transition: opacity 280ms ease, filter 280ms ease, transform 280ms ease, border-color 280ms ease !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card:nth-child(n + 13) {
+    display: grid !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(105deg, transparent 12%, rgba(255, 255, 255, .13) 48%, transparent 82%);
+    transform: translateX(-45%);
+    transition: opacity 280ms ease;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card.is-active {
+    opacity: 1;
+    filter: brightness(1);
+    transform: scale(1);
+    background: #39393c !important;
+    border-color: rgba(255, 255, 255, .32) !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-card.is-active::before {
+    opacity: 1;
+    animation: ecosystem-mobile-card-light 3.2s ease-in-out infinite;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-name {
+    font-size: 1.35rem !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-handle {
+    font-size: .95rem !important;
+  }
+
+  #ivypdqi2q_0.ecosystem-logo-ready .ecosystem-logo-status {
+    position: absolute;
+    right: 3.5rem;
+    bottom: .15rem;
+    z-index: 5;
+    color: rgba(255, 255, 255, .55);
+    font-family: "JetBrains Mono", monospace;
+    font-size: .9rem;
+    letter-spacing: .06em;
+    pointer-events: none;
+  }
+}
+
+@keyframes ecosystem-mobile-card-light {
+  0%, 100% { transform: translateX(-55%); opacity: .2; }
+  50% { transform: translateX(48%); opacity: .9; }
 }
 
 @media (prefers-reduced-motion: reduce) {

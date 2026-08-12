@@ -6,27 +6,35 @@
 #ixbk8xix1_0.faq-carousel-scope #i1pohwaum_0{position:relative!important;inset:auto!important;width:100%!important;min-width:0}
 
 #ixbk8xix1_0 .faq-ticker-shell{position:relative;width:calc(100% + 4rem);margin-left:-2rem;margin-bottom:-3.5rem;overflow:hidden;transform:translateY(-3.5rem)}
-#ixbk8xix1_0 .faq-ticker-viewport{position:relative;height:37rem;overflow:hidden}
+#ixbk8xix1_0 .faq-ticker-viewport{position:relative;height:42rem;overflow:hidden;cursor:grab;touch-action:pan-y;overscroll-behavior-x:none;user-select:none;-webkit-user-select:none}
+#ixbk8xix1_0 .faq-ticker-shell.is-dragging .faq-ticker-viewport{cursor:grabbing}
 #ixbk8xix1_0 .faq-ticker-track{position:absolute;left:0;bottom:0;display:flex;align-items:flex-end;gap:1.4rem;width:max-content;padding:3rem 0 1rem;will-change:transform}
-#ixbk8xix1_0 .faq-ticker-card{position:relative;box-sizing:border-box;flex:0 0 clamp(36rem,32vw,52rem);height:20.5rem;margin-bottom:0;padding:3rem;border:1px solid rgba(0,0,0,.32);background:rgba(247,247,245,.96);clip-path:polygon(0 0,calc(100% - 2.2rem) 0,100% 2.2rem,100% 100%,0 100%);overflow:hidden;cursor:pointer;transition:height .55s cubic-bezier(.22,1,.36,1),background .35s,color .35s,transform .35s,border-color .35s,box-shadow .35s;outline:none}
-#ixbk8xix1_0 .faq-ticker-card:before{content:"";position:absolute;left:3rem;right:3rem;bottom:2.2rem;height:1px;pointer-events:none;background:rgba(0,0,0,.14);opacity:1;transition:background .35s,opacity .35s}
-#ixbk8xix1_0 .faq-ticker-card:after{content:"";position:absolute;right:.75rem;top:.75rem;width:.55rem;height:.55rem;background:#e55224;transform:rotate(45deg);opacity:.62}
-#ixbk8xix1_0 .faq-ticker-card:hover,#ixbk8xix1_0 .faq-ticker-card.is-pinned{height:35rem;background:#111;color:#f5f5f3;border-color:#111;transform:translateY(-.8rem);box-shadow:0 2rem 5rem rgba(0,0,0,.16)}
-#ixbk8xix1_0 .faq-ticker-card:hover:before,#ixbk8xix1_0 .faq-ticker-card.is-pinned:before{background:rgba(255,255,255,.22);opacity:1}
+#ixbk8xix1_0 .faq-ticker-card{position:relative;box-sizing:border-box;flex:0 0 clamp(36rem,32vw,52rem);height:40rem;margin-bottom:0;pointer-events:none;outline:none}
+#ixbk8xix1_0 .faq-ticker-card__surface{position:absolute;inset:0;box-sizing:border-box;padding:3rem;border:1px solid rgba(0,0,0,.32);background:rgba(247,247,245,.96);clip-path:polygon(0 0,calc(100% - 2.2rem) 0,100% 2.2rem,100% 100%,0 100%);overflow:hidden;cursor:pointer;pointer-events:auto;transform:translateY(19.5rem);transition:transform .45s cubic-bezier(.22,1,.36,1),background .25s,color .25s,border-color .25s;will-change:transform}
+#ixbk8xix1_0 .faq-ticker-card__surface:before{content:"";position:absolute;left:3rem;right:3rem;bottom:2.2rem;height:1px;pointer-events:none;background:rgba(0,0,0,.14);opacity:1;transition:background .35s,opacity .35s}
+#ixbk8xix1_0 .faq-ticker-card__surface:after{content:"";position:absolute;right:.75rem;top:.75rem;width:.55rem;height:.55rem;background:#e55224;transform:rotate(45deg);opacity:.62}
+#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__surface{background:#111;color:#f5f5f3;border-color:#111;transform:translateY(0)}
+#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__surface:before{background:rgba(255,255,255,.22);opacity:1}
 #ixbk8xix1_0 .faq-ticker-card__head{position:relative;display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:1.4rem;align-items:start;align-content:start;height:auto;transition:height .35s ease}
-#ixbk8xix1_0 .faq-ticker-card:hover .faq-ticker-card__head,#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__head{height:auto;align-items:start;align-content:start}
+#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__head{height:auto;align-items:start;align-content:start}
 #ixbk8xix1_0 .faq-ticker-card__question{margin:0;font:500 2.15rem/1.18 "JetBrains Mono",monospace;letter-spacing:-.025em;text-transform:uppercase}
 #ixbk8xix1_0 .faq-ticker-card__number{padding-top:.25rem;color:#e55224;font:500 1.25rem/1 "JetBrains Mono",monospace}
-#ixbk8xix1_0 .faq-ticker-card__answer{position:relative;max-width:43rem;max-height:0;margin:0 0 0 5.6rem;padding-top:0;overflow:hidden;opacity:0;transform:translateY(2rem);font:300 1.75rem/1.5 "JetBrains Mono",monospace;letter-spacing:-.01em;transition:max-height .55s cubic-bezier(.22,1,.36,1),padding .4s,opacity .3s .08s,transform .45s .05s}
-#ixbk8xix1_0 .faq-ticker-card:hover .faq-ticker-card__answer,#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__answer{max-height:22rem;padding-top:3.2rem;opacity:.86;transform:translateY(0)}
+#ixbk8xix1_0 .faq-ticker-card__answer{position:relative;max-width:43rem;max-height:calc(100% - 10.5rem);margin:0 0 0 5.6rem;padding:2rem .8rem 2.5rem 0;overflow-x:hidden;overflow-y:auto;opacity:0;transform:translateY(1.5rem);font:300 1.3rem/1.38 "JetBrains Mono",monospace;letter-spacing:-.01em;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.3) transparent;transition:opacity .25s .05s,transform .35s .03s;will-change:transform,opacity}
+#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__answer{opacity:.86;transform:translateY(0)}
 #ixbk8xix1_0 .faq-ticker-card__pin{position:absolute;right:2.4rem;bottom:2rem;display:flex;align-items:center;gap:.8rem;opacity:0;font:500 1rem/1 "JetBrains Mono",monospace;text-transform:uppercase;transition:opacity .25s}
-#ixbk8xix1_0 .faq-ticker-card:hover .faq-ticker-card__pin,#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__pin{opacity:.55}
+#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__pin{opacity:.55}
 #ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__pin{color:#e55224;opacity:1}
 
-#ixbk8xix1_0 .faq-ticker-controls{display:flex;align-items:center;padding:1.4rem 3.2rem 0}
+#ixbk8xix1_0 .faq-ticker-controls{display:grid;grid-template-columns:max-content minmax(10rem,1fr);align-items:center;gap:2rem;padding:1.4rem 3.2rem 0}
 #ixbk8xix1_0 .faq-ticker-status{display:flex;align-items:center;gap:1rem;font:500 1.2rem/1 "JetBrains Mono",monospace;text-transform:uppercase}
 #ixbk8xix1_0 .faq-ticker-status:before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:#e55224;animation:faqPulse 1.6s ease-in-out infinite}
 #ixbk8xix1_0 .faq-ticker-shell.is-paused .faq-ticker-status:before{animation:none;background:#111}
+#ixbk8xix1_0 .faq-ticker-scrubber{width:100%;height:1.4rem;margin:0;padding:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize}
+#ixbk8xix1_0 .faq-ticker-scrubber::-webkit-slider-runnable-track{height:1px;background:rgba(0,0,0,.25)}
+#ixbk8xix1_0 .faq-ticker-scrubber::-webkit-slider-thumb{width:.75rem;height:.75rem;margin-top:calc(-.375rem + .5px);border:0;border-radius:50%;appearance:none;-webkit-appearance:none;background:#e55224;box-shadow:0 0 0 .32rem rgba(229,82,36,.12)}
+#ixbk8xix1_0 .faq-ticker-scrubber::-moz-range-track{height:1px;background:rgba(0,0,0,.25)}
+#ixbk8xix1_0 .faq-ticker-scrubber::-moz-range-thumb{width:.75rem;height:.75rem;border:0;border-radius:50%;background:#e55224;box-shadow:0 0 0 .32rem rgba(229,82,36,.12)}
+#ixbk8xix1_0 .faq-ticker-scrubber:focus-visible{outline:1px solid #e55224;outline-offset:.4rem}
 @keyframes faqPulse{50%{opacity:.25;transform:scale(.7)}}
 
 @media(max-width:991px){#ixbk8xix1_0.faq-carousel-scope #i3d2rfxt1_0{font-size:1.65rem!important}#ixbk8xix1_0 .faq-ticker-card{flex-basis:58vw}#ixbk8xix1_0 .faq-ticker-card__question{font-size:1.9rem}#ixbk8xix1_0 .faq-ticker-card__answer{font-size:1.55rem}}
@@ -35,29 +43,22 @@
 #ixbk8xix1_0.faq-carousel-scope #i1c7plouw_0{margin-top:0;padding-top:3.5rem}
 #ixbk8xix1_0.faq-carousel-scope #i3d2rfxt1_0{margin-bottom:1.5rem}
 #ixbk8xix1_0 .faq-ticker-shell{width:100%;margin-left:0;margin-bottom:-1rem;transform:translateY(-1rem)}
-#ixbk8xix1_0 .faq-ticker-viewport{height:18rem;touch-action:pan-y;overscroll-behavior-x:none;transition:height .45s cubic-bezier(.22,1,.36,1)}
-#ixbk8xix1_0 .faq-ticker-shell:has(.faq-ticker-card.is-pinned) .faq-ticker-viewport{height:29rem}
+#ixbk8xix1_0 .faq-ticker-viewport{height:18rem;transition:height .45s cubic-bezier(.22,1,.36,1)}
+#ixbk8xix1_0 .faq-ticker-viewport{height:29rem}
 #ixbk8xix1_0 .faq-ticker-track{gap:1rem;padding-bottom:.6rem}
-#ixbk8xix1_0 .faq-ticker-card{flex-basis:min(78vw,30rem);height:14rem;padding:1.7rem 1.6rem;clip-path:polygon(0 0,calc(100% - 1.4rem) 0,100% 1.4rem,100% 100%,0 100%)}
+#ixbk8xix1_0 .faq-ticker-track.is-centering{transition:transform .45s cubic-bezier(.22,1,.36,1)}
+#ixbk8xix1_0 .faq-ticker-card{flex-basis:min(78vw,30rem);height:27rem}
+#ixbk8xix1_0 .faq-ticker-card__surface{padding:1.7rem 1.6rem;clip-path:polygon(0 0,calc(100% - 1.4rem) 0,100% 1.4rem,100% 100%,0 100%);transform:translateY(13rem)}
 #ixbk8xix1_0 .faq-ticker-card:nth-child(n){margin-bottom:0}
-#ixbk8xix1_0 .faq-ticker-card.is-pinned{height:27rem}
+#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__surface{transform:translateY(0);box-shadow:none}
 #ixbk8xix1_0 .faq-ticker-card__head{grid-template-columns:3rem minmax(0,1fr);gap:.7rem}
 #ixbk8xix1_0 .faq-ticker-card__number{font-size:1rem}
 #ixbk8xix1_0 .faq-ticker-card__question{font-size:1.35rem;line-height:1.22}
 #ixbk8xix1_0 .faq-ticker-card__answer{margin-left:3.7rem;font-size:1.18rem;line-height:1.42}
-#ixbk8xix1_0 .faq-ticker-card.is-pinned .faq-ticker-card__answer{max-height:18rem;padding-top:1.7rem}
+#ixbk8xix1_0 .faq-ticker-card__answer{max-height:calc(100% - 8rem);padding:1.7rem .5rem 3rem 0;font-size:1.18rem;line-height:1.42}
 #ixbk8xix1_0 .faq-ticker-card__pin{right:1.5rem;bottom:1.25rem;font-size:.75rem}
-#ixbk8xix1_0 .faq-ticker-controls{padding:1rem 1.4rem 0}
+#ixbk8xix1_0 .faq-ticker-controls{grid-template-columns:1fr;gap:.65rem;padding:1rem 1.4rem 0}
 #ixbk8xix1_0 .faq-ticker-status{gap:.7rem;font-size:.92rem}
 #ixbk8xix1_0 .faq-ticker-status:before{width:.5rem;height:.5rem}
 }
-/* Some mobile browsers report hover capability and keep :hover latched after a tap.
-   On phone layouts, expansion is click-controlled only. */
-@media(max-width:479px){
-#ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned){height:14rem;background:rgba(247,247,245,.96);color:#111;border-color:rgba(0,0,0,.32);transform:none;box-shadow:none}
-#ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned):before{opacity:.35}
-#ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned) .faq-ticker-card__head{height:auto;align-items:start;align-content:start}
-#ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned) .faq-ticker-card__answer{max-height:0;padding-top:0;opacity:0;transform:translateY(2rem)}
-#ixbk8xix1_0 .faq-ticker-card:hover:not(.is-pinned) .faq-ticker-card__pin{opacity:0}
-}
-@media(prefers-reduced-motion:reduce){#ixbk8xix1_0 .faq-ticker-card,#ixbk8xix1_0 .faq-ticker-card__answer{transition:none}#ixbk8xix1_0 .faq-ticker-status:before{animation:none}}
+@media(prefers-reduced-motion:reduce){#ixbk8xix1_0 .faq-ticker-card__surface,#ixbk8xix1_0 .faq-ticker-card__answer,#ixbk8xix1_0 .faq-ticker-track.is-centering{transition:none}#ixbk8xix1_0 .faq-ticker-status:before{animation:none}}

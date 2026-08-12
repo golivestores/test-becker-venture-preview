@@ -29,6 +29,109 @@
 
   section.classList.add("ecosystem-logo-ready");
   target.innerHTML = '<div class="ecosystem-logo-carousel" aria-label="Ecosystem partners">' +
-    '<div class="ecosystem-logo-track">' + cards(partners) + cards(partners) + '</div>' +
+    '<div class="ecosystem-logo-track">' + cards(partners) + cards(partners) + cards(partners) + '</div>' +
+    '<span class="ecosystem-logo-status" aria-hidden="true">01 / ' + String(partners.length).padStart(2, "0") + '</span>' +
   '</div>';
+
+  var mobileQuery = window.matchMedia("(max-width: 479px)");
+  var carousel = target.querySelector(".ecosystem-logo-carousel");
+  var status = target.querySelector(".ecosystem-logo-status");
+  var mobileCards = Array.prototype.slice.call(target.querySelectorAll(".ecosystem-logo-card"));
+  var activeIndex = partners.length;
+  var autoTimer = null;
+  var resumeTimer = null;
+  var scrollFrame = null;
+
+  function cardLeft(card) {
+    return card.offsetLeft - (carousel.clientWidth - card.offsetWidth) / 2;
+  }
+
+  function setActive(index) {
+    activeIndex = (index + mobileCards.length) % mobileCards.length;
+    mobileCards.forEach(function (card, cardIndex) {
+      card.classList.toggle("is-active", cardIndex === activeIndex);
+    });
+    status.textContent = String((activeIndex % partners.length) + 1).padStart(2, "0") + " / " + String(partners.length).padStart(2, "0");
+  }
+
+  function goTo(index, smooth) {
+    if (!mobileQuery.matches) return;
+    setActive(index);
+    carousel.scrollTo({ left: cardLeft(mobileCards[activeIndex]), behavior: smooth ? "smooth" : "auto" });
+  }
+
+  function nearestCard() {
+    if (!mobileQuery.matches) return;
+    var center = carousel.scrollLeft + carousel.clientWidth / 2;
+    var nearest = 0;
+    var distance = Infinity;
+    mobileCards.forEach(function (card, index) {
+      var currentDistance = Math.abs(card.offsetLeft + card.offsetWidth / 2 - center);
+      if (currentDistance < distance) {
+        distance = currentDistance;
+        nearest = index;
+      }
+    });
+    setActive(nearest);
+    if (nearest < partners.length / 2 || nearest >= mobileCards.length - partners.length / 2) {
+      var centeredIndex = partners.length + (nearest % partners.length);
+      window.requestAnimationFrame(function () {
+        setActive(centeredIndex);
+        carousel.scrollTo({ left: cardLeft(mobileCards[centeredIndex]), behavior: "auto" });
+      });
+    }
+  }
+
+  function stopAuto() {
+    window.clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  function startAuto() {
+    stopAuto();
+    if (!mobileQuery.matches || document.hidden) return;
+    autoTimer = window.setInterval(function () {
+      goTo(activeIndex + 1, true);
+    }, 3400);
+  }
+
+  function pauseForInteraction() {
+    stopAuto();
+    window.clearTimeout(resumeTimer);
+  }
+
+  function resumeAfterInteraction() {
+    window.clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(startAuto, 3000);
+  }
+
+  carousel.addEventListener("scroll", function () {
+    if (scrollFrame) window.cancelAnimationFrame(scrollFrame);
+    scrollFrame = window.requestAnimationFrame(nearestCard);
+  }, { passive: true });
+  carousel.addEventListener("touchstart", pauseForInteraction, { passive: true });
+  carousel.addEventListener("touchend", resumeAfterInteraction, { passive: true });
+  carousel.addEventListener("pointerdown", pauseForInteraction, { passive: true });
+  carousel.addEventListener("pointerup", resumeAfterInteraction, { passive: true });
+
+  function configureMobile() {
+    stopAuto();
+    window.clearTimeout(resumeTimer);
+    if (mobileQuery.matches) {
+      window.requestAnimationFrame(function () {
+        goTo(activeIndex, false);
+        startAuto();
+      });
+    } else {
+      mobileCards.forEach(function (card) { card.classList.remove("is-active"); });
+    }
+  }
+
+  if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", configureMobile);
+  else mobileQuery.addListener(configureMobile);
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) stopAuto();
+    else startAuto();
+  });
+  configureMobile();
 })();

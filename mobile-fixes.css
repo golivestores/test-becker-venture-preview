@@ -20,11 +20,74 @@
     margin-top: 1.4rem;
   }
 
-  #i16lv2od1_0 #i2ffozohy_0,
-  #i16lv2od1_0 #i3lo9paws_0,
+  /* Keep the original service information on phones. The old mobile override
+     removed these blocks completely, which made the section look unfinished. */
   #i16lv2od1_0 #i2knx9aly_0,
   #i16lv2od1_0 #i30sacunx_0 {
     display: none !important;
+  }
+
+  #i16lv2od1_0 #i3lo9paws_0 {
+    display: flex !important;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.35rem !important;
+    width: 100% !important;
+    margin: 4rem 0 0 !important;
+    order: 6 !important;
+  }
+
+  #i16lv2od1_0 #i3lo9paws_0 .price_call-text {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: .9rem !important;
+    width: 100% !important;
+    padding: 1.4rem 0 !important;
+    border-top: 1px solid rgba(13, 13, 13, .18);
+  }
+
+  #i16lv2od1_0 #i3lo9paws_0 .text,
+  #i16lv2od1_0 #i3lo9paws_0 .text-block-wrap-div {
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  #i16lv2od1_0 #i2ffozohy_0 {
+    display: flex !important;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    width: 100% !important;
+    min-height: 68rem !important;
+    margin-top: 3rem !important;
+    overflow: hidden !important;
+    order: 8 !important;
+  }
+
+  #i16lv2od1_0 #i2ffozohy_0 .price_tag {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 34rem !important;
+    min-height: 34rem !important;
+  }
+
+  #i16lv2od1_0 #i2ffozohy_0 .circle_big {
+    width: 34rem !important;
+    height: 34rem !important;
+  }
+
+  #i16lv2od1_0 #id9dp81hx_0 {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+    order: 7 !important;
   }
 
   /* Shift list: remove the oversized gaps inherited from the desktop scroll layout. */
@@ -36,27 +99,17 @@
     row-gap: 2rem;
   }
 
-  /* Core Value: retain the overlay sequence without the oversized empty stage. */
-  #i1ts5jdxa_0 #ieljs5d2v_0 {
-    height: 58vh !important;
-    min-height: 48rem;
+  #i185tv3al_0 #ie09th3pp_0 {
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  #i1ts5jdxa_0 #i1jja86x7_0 {
-    height: 130vh !important;
-  }
-
-  #i1ts5jdxa_0 .program_list-item {
-    opacity: var(--mobile-pillar-opacity, 0) !important;
-    box-sizing: border-box !important;
-    width: 100% !important;
-    height: 100% !important;
-    transition: opacity .18s linear !important;
-  }
-
-  #i1ts5jdxa_0 .program_list-item > .list-item_text {
-    align-self: end !important;
-    padding-bottom: 2.5rem !important;
+  #i185tv3al_0 .scroll-list_card {
+    display: grid !important;
+    min-height: 22rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
   }
 
   /* Portfolio: the divider script uses four columns, so the CSS must too. */
