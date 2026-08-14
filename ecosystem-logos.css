@@ -162,7 +162,8 @@
     display: block !important;
     height: auto !important;
     min-height: 0 !important;
-    overflow: visible !important;
+    overflow: hidden !important;
+    isolation: isolate;
   }
 
   #ivypdqi2q_0.ecosystem-logo-ready #i2pl80u8h_0,
@@ -190,7 +191,7 @@
 
   #ivypdqi2q_0.ecosystem-logo-ready #i1gotoyt4_0 {
     position: relative !important;
-    padding-top: 3.5rem !important;
+    padding-top: 6.5rem !important;
     padding-bottom: 5rem !important;
   }
 

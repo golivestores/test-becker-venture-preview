@@ -133,5 +133,53 @@
     if (document.hidden) stopAuto();
     else startAuto();
   });
+
+  function syncEcosystemCanvas() {
+    if (!mobileQuery.matches) return;
+    var particleCanvas = document.getElementById("canvas");
+    if (!particleCanvas) return;
+
+    var sectionRect = section.getBoundingClientRect();
+    var nextSection = section.nextElementSibling;
+    var nextRect = nextSection ? nextSection.getBoundingClientRect() : null;
+    var visualBottom = nextRect ? Math.min(sectionRect.bottom, nextRect.top) : sectionRect.bottom;
+    var isActive = sectionRect.top < window.innerHeight * 0.72 && visualBottom > window.innerHeight * 0.34;
+
+    if (isActive) {
+      if (particleCanvas.parentElement !== document.body) document.body.appendChild(particleCanvas);
+      particleCanvas.style.position = "fixed";
+      particleCanvas.style.top = "0";
+      particleCanvas.style.left = "0";
+      particleCanvas.style.zIndex = "3";
+      particleCanvas.style.pointerEvents = "none";
+      var heading = document.getElementById("i3dzatwuv_0");
+      var carousel = document.getElementById("i2gi3nrun_0");
+      var headingRect = heading ? heading.getBoundingClientRect() : null;
+      var carouselRect = carousel ? carousel.getBoundingClientRect() : null;
+      var clipTop = Math.max(0, sectionRect.top, headingRect ? headingRect.bottom + 8 : 0);
+      var canvasVisualBottom = Math.min(
+        visualBottom,
+        carouselRect ? carouselRect.top - 8 : visualBottom
+      );
+      var clipBottom = Math.max(0, window.innerHeight - canvasVisualBottom);
+      var ecosystemClip = "inset(" + clipTop + "px 0 " + clipBottom + "px 0)";
+      particleCanvas.style.clipPath = ecosystemClip;
+      particleCanvas.style.webkitClipPath = ecosystemClip;
+      particleCanvas.style.display = "block";
+      particleCanvas.style.opacity = "1";
+    } else if (visualBottom <= window.innerHeight * 0.34) {
+      particleCanvas.style.opacity = "0";
+      particleCanvas.style.display = "none";
+      particleCanvas.style.clipPath = "none";
+      particleCanvas.style.webkitClipPath = "none";
+    }
+  }
+
+  window.addEventListener("scroll", syncEcosystemCanvas, { passive: true });
+  window.addEventListener("resize", syncEcosystemCanvas);
+  window.addEventListener("pageshow", syncEcosystemCanvas);
   configureMobile();
+  window.requestAnimationFrame(syncEcosystemCanvas);
+  window.setTimeout(syncEcosystemCanvas, 320);
+  window.setTimeout(syncEcosystemCanvas, 1400);
 })();

@@ -1,5 +1,14 @@
 /* Small-screen layout and typography adjustments. */
 @media (max-width: 600px) {
+  :root {
+    --bv-mobile-dark: #0d0d0d;
+  }
+
+  html,
+  body {
+    background-color: var(--bv-mobile-dark) !important;
+  }
+
   /* Services: keep the module count on one line and put the scope link below. */
   #i16lv2od1_0 #i2q7m5357_0 {
     grid-column: 1 / -1;
@@ -110,6 +119,161 @@
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
+  }
+
+  /* Core Value: use a viewport-sized visual stage. The previous canvas host
+     began at the first card, so the Logo's centre was pushed below the fold. */
+  #i1ts5jdxa_0 {
+    position: relative;
+    isolation: isolate;
+    z-index: 3;
+    /* The mobile particle canvas lives at body level so it can cross the
+       section boundary continuously. Keep this stacking context transparent:
+       the page supplies the same black underneath, while the section's copy
+       remains above the canvas instead of being covered by its WebGL clear. */
+    background: transparent !important;
+  }
+
+  #i1ts5jdxa_0 #core-value-particle-stage {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
+    margin-bottom: -100svh;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #i1ts5jdxa_0 #core-value-particle-stage canvas {
+    pointer-events: none !important;
+  }
+
+  #i1ts5jdxa_0 #i1zcl8r9k_0 {
+    position: relative;
+    z-index: 3;
+  }
+
+  #i1ts5jdxa_0 #ieljs5d2v_0 {
+    isolation: isolate;
+    background: transparent !important;
+  }
+
+  #i1ts5jdxa_0 .program_list-item {
+    z-index: 3 !important;
+    /* Keep the card's transform free: the source scroll animation uses it to
+       move each panel in and out. Forcing a compositor transform here pins all
+       three cards to the same coordinates on mobile. The copy itself is
+       promoted below, so it still stays above the WebGL layer. */
+  }
+
+  #i1ts5jdxa_0 .program_list-item .text-num,
+  #i1ts5jdxa_0 .program_list-item .program_title,
+  #i1ts5jdxa_0 .program_list-item .list-item_text {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Hero: the desktop scroll animation leaves the mobile headline at
+     opacity: 0, while the WebGL canvas may be composited above normal text.
+     Keep only the hero copy on a dedicated foreground layer. */
+  #i2ctb6t7i_0,
+  #i2796kgzu_0 {
+    background: var(--bv-mobile-dark) !important;
+  }
+
+  #i2ctb6t7i_0 #i1tyx2d95_0 {
+    position: relative;
+  }
+
+  #i2ctb6t7i_0 #hero-particle-stage {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 120svh;
+    min-height: 120svh;
+    margin-bottom: -120svh;
+    background: var(--bv-mobile-dark);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #i2ctb6t7i_0 #hero-particle-stage canvas {
+    pointer-events: none;
+  }
+
+  #i2ctb6t7i_0 #i3s7itiep_0 {
+    position: sticky;
+    top: 0;
+    isolation: isolate;
+    z-index: 2;
+  }
+
+  #i2ctb6t7i_0 #i1n0b5duy_0,
+  #i2ctb6t7i_0 #i1fj963zc_0 {
+    position: relative !important;
+    z-index: 3 !important;
+    transform: translate3d(0, 0, 1px) !important;
+    backface-visibility: hidden;
+  }
+
+  #i2ctb6t7i_0 #i1n0b5duy_0 {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* The scramble-title script wraps every letter in transformed nodes. On
+     mobile Chromium those nodes can disappear after the canvas initializes,
+     despite reporting opacity: 1. Render the same headline as one stable
+     foreground text layer on phones. */
+  #i2ctb6t7i_0 #i1n0b5duy_0 > * {
+    opacity: 0 !important;
+  }
+
+  #i2ctb6t7i_0 #i1n0b5duy_0::after {
+    content: "REBUILDING\A CAPITAL MARKETS\A FOR THE WEB3 ERA";
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: block;
+    color: #eee;
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: uppercase;
+    white-space: pre-line;
+    transform: translate3d(0, 0, 2px);
+  }
+
+  #i2ctb6t7i_0 #i20ggwmzh_0 {
+    position: relative;
+    z-index: 4;
+  }
+
+  /* One uninterrupted dark surface behind the later shared WebGL scene.
+     Keep only the section shells uniform; card fills retain their own source
+     colours. This removes the visible dark/darker split on phones. */
+  #ivypdqi2q_0,
+  #ivypdqi2q_0 #i2pl80u8h_0,
+  #ivypdqi2q_0 #i1gotoyt4_0,
+  #ivypdqi2q_0 #i3dzatwuv_0 {
+    background-color: transparent !important;
+  }
+
+  #ivypdqi2q_0 {
+    z-index: 3 !important;
+  }
+
+  #canvas {
+    background: transparent !important;
+    will-change: opacity, mask-image, -webkit-mask-image;
+  }
+
+  #ivypdqi2q_0 #i3dzatwuv_0,
+  #ivypdqi2q_0 #i2gi3nrun_0,
+  #ivypdqi2q_0 .about_card {
+    position: relative;
+    z-index: 3;
   }
 
   /* Portfolio: the divider script uses four columns, so the CSS must too. */

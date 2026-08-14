@@ -63,10 +63,9 @@ WebFont.load({
             <script src='shared/s3/js/common.min.js'></script>
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" href="faq-redesign.css?v=23">
-<link rel="stylesheet" href="industry-report.css?v=4">
 <link rel="stylesheet" href="service-scope.css">
 <link rel="stylesheet" href="ecosystem-logos.css?v=10">
-<link rel="stylesheet" href="mobile-fixes.css?v=12">
+<link rel="stylesheet" href="mobile-fixes.css?v=16">
 
 <!--s3_require-->
 
@@ -712,6 +711,7 @@ WebFont.load({
 </header>
 <main class='section section--u-i2ctb6t7i section-paddings cover-anim' id='i2ctb6t7i_0'>
 <div class='container container-base container--u-i1tyx2d95 padding-cover' id='i1tyx2d95_0'>
+<div class='hero-particle-stage' id='hero-particle-stage' aria-hidden='true'></div>
 <div class='div div--u-i3s7itiep' id='i3s7itiep_0'>
 <div class='div div--u-iukoyqrbj' id='iukoyqrbj_0'>
 <div class='text h1 text--u-ij1hgrvsi scramble-title' id='ij1hgrvsi_0'>
@@ -837,6 +837,7 @@ WebFont.load({
 </div>
 </section>
 <section class='section section-paddings mt_80 one-two-tree-nim' id='i1ts5jdxa_0'>
+<div class='core-value-particle-stage' id='core-value-particle-stage' aria-hidden='true'></div>
 <div class='container container-base' id='i1zcl8r9k_0'>
 <div class='div div--u-i2wfnluj1 padding-block_nomob' id='i2wfnluj1_0'>
 <div class='div div--u-i3huyi5wt' id='i3huyi5wt_0'>
@@ -1329,124 +1330,118 @@ WebFont.load({
 <section class='section section-paddings mt_80' id='logo-portfolio'>
 <div class='container container-base'>
 <div class="container-white" style="border-radius:0.5rem;padding:4rem 2.5rem 5rem;">
-<div class='div padding-block portfolio-head' style="margin-bottom:2rem;">
+<div class='div padding-block' style="margin-bottom:3rem;">
 <h2 class='text text-body opacity_65'><span class='text-block-wrap-div'>[Portfolio]</span></h2>
-<h3 class='text h1 scramble-title'><span class='text-block-wrap-div'>BECKER VENTURE</span></h3>
-<p class='text text-body opacity_80 portfolio-intro-copy'><span class="portfolio-copy-desktop">A curated view of the companies, themes, and people we support—highlighting durable businesses, strong teams<br class="portfolio-intro-break"> differentiated products, key milestones, and our long-term collaboration with founders.</span><span class="portfolio-copy-mobile">A curated view of the companies and people we support—highlighting strong teams, differentiated products, and long-term collaboration.</span></p>
+<h3 class='text h1 scramble-title'><span class='text-block-wrap-div'>Trusted by Innovators<br>Across Web3</span></h3>
 </div>
 <style>
-.logo-grid{display:flex;flex-wrap:wrap;align-items:stretch;}
-/* Saved alternative layout: switch .logo-grid to display:grid with
-   grid-template-columns:repeat(5,minmax(0,1fr)), remove item flex growth,
-   and enable the commented Becker brand tile below for 5 + 5 + 4 + 1. */
-.portfolio-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:0!important;width:100%!important;height:auto!important;min-height:0!important;}
-.portfolio-head>.text{position:relative!important;inset:auto!important;display:block!important;float:none!important;width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important;transform:none!important;}
-.portfolio-head .h1{margin-top:.8rem!important;}
-.portfolio-intro-copy{width:100%!important;max-width:62rem!important;margin:2rem 0 0!important;line-height:1.55!important;text-transform:none!important;}
-.portfolio-copy-mobile{display:none;}
-.logo-grid-item{display:flex;align-items:center;justify-content:center;box-sizing:border-box;flex:1 1 calc(100% / 6);padding:3.5rem 1rem;position:relative;min-width:0;min-height:17rem;border-bottom:1px solid rgba(13,13,13,0.08);text-decoration:none;}
+.section-jump-link{display:inline-flex;align-items:center;gap:1.2rem;padding-bottom:.5rem;border-bottom:1px solid currentColor;color:#111;font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:300;line-height:1.3;text-decoration:none;text-transform:uppercase;letter-spacing:-.01em;}
+.section-jump-link__arrow{display:inline-flex;align-items:center;justify-content:center;width:2.8rem;height:2.8rem;border:1px solid currentColor;transition:transform .25s ease,background-color .25s ease,color .25s ease;}
+.section-jump-link:hover .section-jump-link__arrow,.section-jump-link:focus-visible .section-jump-link__arrow{transform:translate(.18rem,-.18rem);background:#111;color:#fff;}
+.portfolio-jump-row{display:flex;justify-content:flex-end;padding-top:3rem;}
+.process-jump-link{grid-row:2;grid-column:1/4;align-self:start;justify-self:start;margin-top:5rem;z-index:2;}
+.logo-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+.logo-grid-item{display:flex;align-items:center;justify-content:center;flex:1 1 calc(100%/6);padding:3.5rem 1rem;position:relative;min-width:0;}
 .logo-grid-item img{width:100px;height:100px;object-fit:contain;opacity:0.45;transition:opacity 0.4s ease,transform 0.3s ease;filter:grayscale(100%);}
 .logo-grid-item:hover img{opacity:1;filter:grayscale(0%);transform:scale(1.1);}
-/* Saved styles for the optional Becker brand tile.
-.logo-grid-item--brand{cursor:default;}
-.logo-grid-item--brand:before{content:"";position:absolute;width:100px;height:100px;background:#111;opacity:0;transition:opacity .3s ease,transform .35s ease;}
-.logo-grid-item--brand img{position:absolute;width:100px;height:100px;z-index:1;opacity:.72;filter:none;transition:opacity .3s ease,transform .35s ease;}
-.logo-grid-item--brand .logo-grid-brand-white{opacity:0;}
-.logo-grid-item--brand:hover:before{opacity:1;transform:scale(1.06);}
-.logo-grid-item--brand:hover .logo-grid-brand-black{opacity:0;transform:scale(.94);}
-.logo-grid-item--brand:hover .logo-grid-brand-white{opacity:1;transform:scale(1.06);}
-*/
 .logo-grid-divider{display:none;}
 .logo-grid-row-divider{width:100%;height:1px;background:rgba(13,13,13,0.08);flex-shrink:0;}
-@media(max-width:767px){.logo-grid-item{flex-basis:calc(100% / 3);min-height:10rem;padding:2rem .5rem;}.logo-grid-item img{width:60px;height:60px;}}
-@media(max-width:767px){.portfolio-intro-copy{max-width:100%!important;margin-top:1.6rem!important;}}
-@media(max-width:767px){.portfolio-intro-break{display:none;}}
-@media(max-width:600px){.portfolio-copy-desktop{display:none;}.portfolio-copy-mobile{display:inline;}}
-@media(max-width:479px){.logo-grid-item{min-height:7rem;padding:1.2rem 1.5rem;}.logo-grid-item img{width:32px;height:32px;}}
+@media(max-width:479px){.logo-grid-item{flex:1 1 calc(100%/3);padding:2rem 0.5rem;}.logo-grid-item img{width:60px;height:60px;}}
+@media(max-width:479px){.logo-grid-item{padding:1.2rem 1.5rem;}.logo-grid-item img{width:32px;height:32px;}}
+@media(max-width:767px){.section-jump-link{font-size:1.4rem;}.section-jump-link__arrow{width:2.6rem;height:2.6rem;}.portfolio-jump-row{justify-content:flex-start;padding-top:2rem;}}
+@media(max-width:479px){
+  .div--u-i3slru2v2{grid-template-rows:auto auto auto auto auto;}
+  .process-jump-link{grid-row:3;grid-column:1/3;margin-top:3rem;}
+  .div--u-i2nobq6h4{grid-row:4;margin-top:6rem;}
+  .div--u-i2bdeexdy{grid-row:5;margin-top:5rem;}
+}
 </style>
 <div class="logo-grid" id="logoGrid"></div>
+<div class="portfolio-jump-row">
+<a class="section-jump-link" href="https://alkaline-output-1eb.notion.site/BECKER-VENTURE-Portfolio-3b626f74f79d80bab277c4a208d81283?pvs=73" target="_blank" rel="noopener noreferrer" aria-label="View Becker Venture investments">
+<span>VIEW INVESTMENTS</span><span class="section-jump-link__arrow" aria-hidden="true">↗</span>
+</a>
+</div>
 <script>
 (function(){
   var logos=[
-    {name:'KIP Protocol',file:'imgi_12_DGOwVMhKhfo1jw7E3oXzeVCLgE.png',url:'https://www.kip.pro/'},
-    {name:'Mango Network',file:'imgi_15_EkG8yOKo8LwboeArBRlN0iZTfIo.png',url:'https://mangonet.io/'},
-    {name:'Origins Network',file:'imgi_13_1WFu5yZlFIAXZF9Ds5gVO5hEcs.png',url:'https://www.origins.network/'},
-    {name:'ALPHEA',file:'imgi_14_tI1eT82AmmrA5nQRjJXoXEoNk2Q.png',url:'https://www.alphea.ai/'},
-    {name:'AiTraceRoot',file:'imgi_31_9SKAKR8qWcTkXikqId1mg9k1QO8.png',url:'https://aitraceroot.com/'},
-    {name:'ANT.FUN',file:'imgi_25_vXlyNMhvVlnRQkajnskGxTZyS8.png',url:'https://ant.fun/'},
-    {name:'Sportix.AI',file:'imgi_19_IGxYbrq6pSSQgwbp3ssTcmW48Tw.png',url:'https://www.sport-ix.net/en'},
-    {name:'TaiJi',file:'imgi_26_w5FoWvVTB27kCfyP2cfu0J7WFlY.png',url:'https://x.com/TAIJIbsc'},
-    {name:'2U2ai',file:'imgi_21_qmTtTTsKqR4c3ZY1gTjeDby6Sg.png',url:'https://2u2.ai/app/'},
-    {name:'Bullshot',file:'imgi_79_7862uQOLOFQNAEpgGgYoYIPV4s.png',url:'https://bullshot.io/'},
-    {name:'SwarmBase',file:'imgi_24_5AshECuwV4Ma0lcn2LFTcdE1Q.png',url:'https://swarmbase.io/'},
-    {name:'NEXST.AI',file:'imgi_30_OSgfY88soGPpefHbHqPfZ5H4IE.png',url:'https://nexst.io/'},
-    {name:'MarsCat',file:'imgi_74_4SGGl2QIfZFTK7MlN8xRK7f9hM.png',url:'https://marscat.io/'},
-    {name:'Orca',file:'imgi_82_h9EEjBhapizRElCbReTBjIYWnpQ.png',url:'https://www.iorca.xyz/'}
+    'imgi_12_DGOwVMhKhfo1jw7E3oXzeVCLgE.png',
+    'imgi_13_1WFu5yZlFIAXZF9Ds5gVO5hEcs.png',
+    'imgi_14_tI1eT82AmmrA5nQRjJXoXEoNk2Q.png',
+    'imgi_15_EkG8yOKo8LwboeArBRlN0iZTfIo.png',
+    'imgi_17_OkXQQDMLQo0AsXV1CIeST03ncWs.png',
+    'imgi_18_nXlDoU7BoIP97rzcGvxE4qqj3E4.png',
+    'imgi_19_IGxYbrq6pSSQgwbp3ssTcmW48Tw.png',
+    'imgi_20_C16JT2E46lfTaOvx5IKERWcOW7k.png',
+    'imgi_21_qmTtTTsKqR4c3ZY1gTjeDby6Sg.png',
+    'imgi_24_5AshECuwV4Ma0lcn2LFTcdE1Q.png',
+    'imgi_25_vXlyNMhvVlnRQkajnskGxTZyS8.png',
+    'imgi_26_w5FoWvVTB27kCfyP2cfu0J7WFlY.png',
+    'imgi_30_OSgfY88soGPpefHbHqPfZ5H4IE.png',
+    'imgi_31_9SKAKR8qWcTkXikqId1mg9k1QO8.png',
+    'imgi_68_hFseeZsJANZncSo24Xt7sUCf8Y.png',
+    'imgi_74_4SGGl2QIfZFTK7MlN8xRK7f9hM.png',
+    'imgi_79_7862uQOLOFQNAEpgGgYoYIPV4s.png',
+    'imgi_82_h9EEjBhapizRElCbReTBjIYWnpQ.png'
   ];
   var grid=document.getElementById('logoGrid');if(!grid)return;
+  var cols=window.innerWidth<480?4:6;
   logos.forEach(function(logo,i){
-    var item=document.createElement('a');
+    if(i>0 && i%cols===0){
+      var rowDiv=document.createElement('div');
+      rowDiv.className='logo-grid-row-divider';
+      grid.appendChild(rowDiv);
+    } else if(i>0 && i%cols!==0){
+      var vDiv=document.createElement('div');
+      vDiv.className='logo-grid-divider';
+      grid.appendChild(vDiv);
+    }
+    var item=document.createElement('div');
     item.className='logo-grid-item';
-    item.href=logo.url;
-    item.target='_blank';
-    item.rel='noopener noreferrer';
-    item.title=logo.name;
-    item.setAttribute('aria-label',logo.name+' — visit website');
     var img=document.createElement('img');
-    img.src='Becker Ventures logo/'+logo.file;
-    img.alt=logo.name;img.loading='lazy';
+    img.src='Becker Ventures logo/'+logo;
+    img.alt='Partner';img.loading='lazy';
     item.appendChild(img);
     grid.appendChild(item);
   });
-  /* Saved optional 15th tile for the 5 + 5 + 4 + 1 layout.
-  var brand=document.createElement('div');
-  brand.className='logo-grid-item logo-grid-item--brand';
-  brand.setAttribute('aria-label','Becker Venture');
-  var brandBlack=document.createElement('img');
-  brandBlack.className='logo-grid-brand-black';
-  brandBlack.src='logo/BΞCKER Logo纯图形黑标.svg';
-  brandBlack.alt='Becker Venture';
-  var brandWhite=document.createElement('img');
-  brandWhite.className='logo-grid-brand-white';
-  brandWhite.src='logo/BΞCKER Logo纯图形反白.svg';
-  brandWhite.alt='';
-  brandWhite.setAttribute('aria-hidden','true');
-  brand.appendChild(brandBlack);
-  brand.appendChild(brandWhite);
-  grid.appendChild(brand);
-  */
 })();
 </script>
 </div>
 </div>
 </section>
 
-<section class='section section-paddings mt_80 industry-report-page' id='i272d12s9_0'>
-<div class='container container-base industry-report-shell'>
-<header class='industry-report-head'>
-<div class='industry-report-kicker'>[REPORTS]</div>
-<h2 class='industry-report-title'>BECKER VENTURE<br>INDUSTRY RESEARCH<br>REPORTS</h2>
-</header>
-<div class='industry-report-visual' aria-live='polite'>
-<span class='industry-report-dot' aria-hidden='true'></span>
-<div class='industry-report-visual-meta'><span>[RESEARCH FRAMEWORK]</span><span data-report-visual-index>01 / 05</span></div>
-<div class='industry-report-visual-word'>
-<span data-report-focus-number>01</span>
-<strong data-report-focus-title>WHY / WHAT</strong>
+<section class='section section-paddings mt_80 section--u-i272d12s9' id='i272d12s9_0'>
+<div class='container container-base container-white' id='i2mpt3e84_0'>
+<div class='div padding-block div--u-i3slru2v2' id='i3slru2v2_0'>
+<div class='div div--u-i6xo1rq2v' id='i6xo1rq2v_0'></div>
+<div class='div div--u-i3n9v5wnh' id='i3n9v5wnh_0'></div>
+<h2 class='text text-body opacity_65 text--u-iw20gzvct' id='iw20gzvct_0'>
+<span class='text-block-wrap-div'>[Reports]</span>
+</h2>
+<h3 class='text h1 text--u-i39d417u6 scramble-title' id='i39d417u6_0'>
+<span class='text-block-wrap-div'>BECKER VENTURE | Industry Research Reports</span>
+</h3>
+<a class="section-jump-link process-jump-link" href="https://alkaline-output-1eb.notion.site/BECKER-VENTURE-Industry-Research-Reports-3b626f74f79d80039e45ec2b66bb4685?source=copy_link" target="_blank" rel="noopener noreferrer" aria-label="View all Becker Venture industry research reports">
+<span>READ RESEARCH</span><span class="section-jump-link__arrow" aria-hidden="true">↗</span>
+</a>
+<div class='div izum_card div--u-i2nobq6h4' id='i2nobq6h4_0'>
+<div class='text text-num tcolor_orange' id='i1a1n0j96_0'>
+<span class='text-block-wrap-div'>01.</span>
+</div>
+<div class='text text-body opacity_80' id='i3hr8lbxj_0'>
+<span class='text-block-wrap-div'>BECKER VENTURE produces industry research and interim viewpoints to support investment decisions, product strategy, and go-to-market planning.</span>
 </div>
 </div>
-<article class='industry-report-intro'>
-<span>[ENGLISH VERSION]</span>
-<p>This page consolidates industry research reports and interim viewpoints produced by <strong>BECKER VENTURE</strong>. It supports investment decisions, product strategy, and go-to-market planning through reusable insights, data, and clearly stated assumptions.</p>
-</article>
-<nav class='industry-report-index' aria-label='Research framework'>
-<div class='industry-report-index-head'><span>[RESEARCH CONTENT]</span><span>01—05</span></div>
-<button class='industry-report-row is-active' type='button' data-report-number='01' data-report-title='WHY / WHAT'><span>01.</span><strong>RESEARCH SCOPE &amp; KEY QUESTIONS</strong><small>WHY / WHAT</small></button>
-<button class='industry-report-row' type='button' data-report-number='02' data-report-title='INSIGHTS'><span>02.</span><strong>KEY FINDINGS &amp; TESTABLE HYPOTHESES</strong><small>INSIGHTS &amp; HYPOTHESES</small></button>
-<button class='industry-report-row' type='button' data-report-number='03' data-report-title='LANDSCAPE'><span>03.</span><strong>MARKET SIZING, GROWTH DRIVERS &amp; COMPETITIVE LANDSCAPE</strong><small>TAM / SAM / SOM</small></button>
-<button class='industry-report-row' type='button' data-report-number='04' data-report-title='BUSINESS MODEL'><span>04.</span><strong>KEY PLAYERS, BUSINESS MODELS &amp; UNIT ECONOMICS</strong><small>BUSINESS MODEL &amp; UNIT ECONOMICS</small></button>
-<button class='industry-report-row' type='button' data-report-number='05' data-report-title='RISKS'><span>05.</span><strong>RISKS, CRITICAL VARIABLES &amp; FOLLOW-UP TRACKING</strong><small>RISKS &amp; TRACKING</small></button>
-</nav>
+<div class='div izum_card div--u-i2bdeexdy' id='i2bdeexdy_0'>
+<div class='text text-num tcolor_orange' id='imjqlnwln_0'>
+<span class='text-block-wrap-div'>02.</span>
+</div>
+<div class='text text-body opacity_80' id='i23qbmj8v_0'>
+<span class='text-block-wrap-div'>Our research covers market dynamics, key players, business models, growth drivers, critical risks, and clearly stated assumptions.</span>
+</div>
+</div>
+<div class='div circle div--u-i1ia7141d' id='i1ia7141d_0'></div>
+</div>
 </div>
 </section>
 <section class='section section-paddings mt_20 section--u-i1y2waq1b' id='i1y2waq1b_0' style='display:none'>
@@ -2685,14 +2680,19 @@ document.addEventListener("DOMContentLoaded", function () {
   uniform float animStops[12];
   uniform float size;
   uniform float scale;
+  uniform float glowLayer;
 
   varying float fadeOut;
   varying vec3 vNormal;
   varying vec3 vColor;
   varying float vFogDepth;
+  varying float vStream;
+  varying float vStreamPhase;
 
   attribute vec3 planePosition;
   attribute vec3 logoPosition;
+  attribute vec3 logoMeta;
+  attribute vec2 logoEdge;
   attribute float index;
 
   vec4 calcPerm(vec4 x){return mod(((x*34.0)+1.0)*x,289.0);}
@@ -2932,32 +2932,167 @@ document.addEventListener("DOMContentLoaded", function () {
     return applyRadNoise(genSph(fm,smp,nm))*sc+rotByNorm(baseN,ang)*dist;
   }
 
+  vec3 rotateLogoY(vec3 p,float a){
+    float c=cos(a),s=sin(a);
+    return vec3(c*p.x+s*p.z,p.y,-s*p.x+c*p.z);
+  }
+
+  vec3 rotateLogoX(vec3 p,float a){
+    float c=cos(a),s=sin(a);
+    return vec3(p.x,c*p.y-s*p.z,s*p.y+c*p.z);
+  }
+
+  // The logo is sampled as a hybrid shell on the CPU: logoMeta.x identifies
+  // front / rear / side particles, logoMeta.y is the side-wall depth and
+  // logoEdge is the signed-distance-field normal at the silhouette.
+  float logoMembraneHeight(vec2 q,float phase){
+    float r=length(q);
+    float angle=atan(q.y,q.x);
+    float core=1.0-smoothstep(0.20,0.72,r);
+    float lobeMask=smoothstep(0.42,0.94,r);
+
+    vec2 quadrant=mix(vec2(-1.0),vec2(1.0),step(vec2(0.0),q));
+    vec2 lobeCentre=quadrant*vec2(0.66,0.63);
+    vec2 local=(q-lobeCentre)*vec2(0.88,1.04);
+    float localR=length(local);
+    float capCoord=clamp(localR/1.22,0.0,1.0);
+    float lobeCap=sqrt(max(0.0,1.0-capCoord*capCoord))*0.36;
+
+    // Two broad waves cross the whole mark, so the four leaves move as one
+    // elastic sheet instead of four independently animated tiles.
+    float waveA=sin(q.x*1.20+q.y*0.42-time*0.29+phase)*0.052;
+    float waveB=cos(q.y*1.42-q.x*0.31+time*0.23+phase)*0.036;
+    float travelling=sin(r*2.15-angle*0.58-time*0.35+phase)*0.026;
+    // A restrained quadrant offset prevents the four leaves from collapsing
+    // into one perfectly frontal plane while keeping the centre continuous.
+    float lobeOffset=(quadrant.y*0.018-quadrant.x*0.012+
+      quadrant.x*quadrant.y*0.007)*lobeMask;
+    float membrane=lobeCap+lobeOffset+
+      (waveA+waveB+travelling)*mix(0.35,1.0,lobeMask);
+
+    float coreBowl=-0.036+sin(q.x*1.15-time*0.25+phase)*0.018+
+      cos(q.y*1.28+time*0.20+phase)*0.012;
+    return mix(membrane,coreBowl,core*0.88);
+  }
+
+  vec3 logoMembraneNormal(vec2 q,float phase){
+    float e=0.025;
+    float hL=logoMembraneHeight(q-vec2(e,0.0),phase);
+    float hR=logoMembraneHeight(q+vec2(e,0.0),phase);
+    float hD=logoMembraneHeight(q-vec2(0.0,e),phase);
+    float hU=logoMembraneHeight(q+vec2(0.0,e),phase);
+    return normalize(vec3(-(hR-hL)/(2.0*e),-(hU-hD)/(2.0*e),1.0));
+  }
+
+  vec3 sculptLogoMembrane(vec3 source,float phase,inout vec3 surfaceNormal){
+    vec3 p=source;
+    float r=length(p.xy);
+    float angle=atan(p.y,p.x);
+    float lobeMask=smoothstep(0.44,0.98,r);
+    float outerMask=smoothstep(0.72,1.88,r);
+
+    float breath=sin(time*0.18+angle*1.35+phase)*0.010*lobeMask;
+    float contourWave=sin(angle*4.0-time*0.16+phase)*0.008*outerMask;
+    p.xy*=1.0+breath+contourWave;
+
+    float frontSurface=logoMembraneHeight(p.xy,phase);
+    float shellThickness=mix(0.15,0.27,lobeMask);
+    vec3 frontNormal=logoMembraneNormal(p.xy,phase);
+    float layer=logoMeta.x;
+
+    if(layer<0.5){
+      p.z=frontSurface;
+      surfaceNormal=frontNormal;
+    } else if(layer<1.5){
+      p.z=frontSurface-shellThickness;
+      surfaceNormal=-frontNormal;
+    } else {
+      // A real continuous side wall sampled from the logo distance field.
+      // It bridges front and rear instead of duplicating a second flat mask.
+      float wallT=logoMeta.y;
+      p.xy+=logoEdge*0.012*sin(wallT*VAL_PI);
+      p.z=frontSurface-shellThickness*wallT;
+      surfaceNormal=normalize(vec3(logoEdge,mix(0.12,-0.12,wallT)));
+    }
+    return p;
+  }
+
   vec3 calcLogoSingle(inout vec3 nm){
-    nm=vec3(0.0,0.0,1.0);
-    vec3 p=logoPosition*0.72;
-    p.z+=calcRawNoise(vec3(logoPosition.xy,time*0.025))*0.035;
+    vec3 p=sculptLogoMembrane(logoPosition,0.0,nm)*1.08;
+    // The object always presents a little side and underside. Low-frequency
+    // motion changes the silhouette without requiring the viewer to drag it.
+    float turn=sin(time*0.13)*0.028+0.235;
+    float tilt=-0.105+sin(time*0.105+0.7)*0.014;
+    p=rotateLogoX(rotateLogoY(p,turn),tilt);
+    nm=rotateLogoX(rotateLogoY(nm,turn),tilt);
     return p;
   }
 
-  vec3 calcLogoDual(inout vec3 nm){
-    nm=vec3(0.0,0.0,1.0);
-    float second=step(SAMPLES*0.5,getVId());
-    float angle=time*0.1+VAL_PI*(0.1+second);
-    vec3 offset=rotByNorm(vec3(0.0,-1.0,-1.6),angle)*1.1;
-    vec3 p=logoPosition*0.34+offset;
-    p.z+=calcRawNoise(vec3(logoPosition.xy,time*0.024))*0.02;
+  vec3 calcLogoToRiver(vec3 logoP,vec3 riverP,float progress){
+    float id=getVId();
+    float seed=rndVal(vec2(id*0.73,19.4));
+    // Edge and side-wall particles leave first; the recognisable core holds
+    // for a moment before joining the same directed flow.
+    float edgeOrder=1.0-logoMeta.z;
+    float delay=mix(0.02,0.36,1.0-edgeOrder)+seed*0.055;
+    float local=smoothstep(delay,min(1.0,delay+0.48),progress);
+    vec2 releaseDir=logoEdge;
+    if(length(releaseDir)<0.2) releaseDir=normalize(logoPosition.xy+vec2(0.001));
+    vec3 lift=vec3(releaseDir*mix(0.10,0.24,seed),mix(-0.05,0.11,seed));
+    lift+=vec3(-0.12,-0.07,0.0);
+    float arc=sin(local*VAL_PI);
+    vec3 released=logoP+lift*arc;
+    released.z+=arc*(0.08+seed*0.12);
+    // Hold the loosened silhouette before the current captures it. A short,
+    // decisive capture avoids the amorphous oval produced by linear morphing.
+    float capture=smoothstep(0.74,0.98,local);
+    return mix(released,riverP,capture);
+  }
+
+  vec3 calcLogoRiver(float phase,float bend,inout vec3 nm){
+    float id=getVId();
+    float seed=rndVal(vec2(id*0.37,41.7));
+    float seedB=rndVal(vec2(id*0.71,17.3));
+    float strand=mod(id,5.0);
+    float row=floor(id/5.0);
+    float total=max(1.0,floor(SAMPLES/5.0));
+    float u=fract(row/total+time*0.032+phase);
+    float lane=(strand-2.0)/2.0+(seed-0.5)*0.065;
+    float depth=(seedB-0.5)*2.0;
+    float envelope=pow(sin(u*VAL_PI),0.62);
+
+    vec2 p0=vec2(-6.15,4.55);
+    vec2 p1=vec2(-4.80,1.22);
+    vec2 p2=vec2(-0.15,-1.18);
+    vec2 p3=vec2(6.20,-2.88);
+    float iu=1.0-u;
+    vec2 curve=iu*iu*iu*p0+3.0*iu*iu*u*p1+3.0*iu*u*u*p2+u*u*u*p3;
+    curve+=vec2(0.48,-0.06);
+    vec2 deriv=3.0*iu*iu*(p1-p0)+6.0*iu*u*(p2-p1)+3.0*u*u*(p3-p2);
+    vec2 curveNormal=normalize(vec2(-deriv.y,deriv.x));
+    curve.y+=sin(u*VAL_PI*2.0+time*0.16+strand*0.18)*0.075*bend*envelope;
+    float centreDistance=abs(strand-2.0)/2.0;
+    float laneWeight=mix(1.0,0.72,centreDistance);
+    float curtainOpen=pow(sin(u*VAL_PI),0.74);
+    float lowerBias=mix(0.86,1.24,smoothstep(0.18,0.76,u));
+    float riverWidth=(0.09+0.58*curtainOpen)*laneWeight*lowerBias;
+    vec2 ribbonXY=curve+curveNormal*lane*riverWidth;
+    vec3 p=vec3(
+      ribbonXY.x,
+      ribbonXY.y,
+      depth*(0.08+0.31*curtainOpen)+lane*0.17+sin(u*VAL_PI*3.0+time*0.18+strand*0.24)*0.075
+    );
+    p+=vec3(curveNormal*0.035*sin(seedB*VAL_PI*2.0+time*0.52),0.0);
+    vec3 tangent=normalize(vec3(deriv,cos(u*VAL_PI*3.0)*0.30));
+    nm=normalize(cross(tangent,vec3(0.0,0.0,1.0))+vec3(0.0,0.0,0.42));
     return p;
   }
 
-  vec3 calcLogoTriple(inout vec3 nm){
-    nm=vec3(0.0,0.0,1.0);
-    float group=floor(min(2.0,getVId()/(SAMPLES*0.3333)));
-    float angle=time*0.1+VAL_PI*(0.4+group*0.67);
-    vec3 offset=rotByNorm(vec3(0.0,-1.0,-2.0),angle)*1.15;
-    vec3 p=logoPosition*0.29+offset;
-    p.z+=calcRawNoise(vec3(logoPosition.xy,time*0.022))*0.018;
-    return p;
-  }
+  // 02 and 03 deliberately share one continuous stream. They are content
+  // chapters of the same visual state, not two shapes to morph between.
+  vec3 calcLogoDual(inout vec3 nm){return calcLogoRiver(0.0,1.0,nm);}
+
+  vec3 calcLogoTriple(inout vec3 nm){return calcLogoRiver(0.0,1.0,nm);}
 
   vec3 calcLogoCloud(inout vec3 nm){
     nm=vec3(0.0,0.0,1.0);
@@ -3035,14 +3170,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   void main(){
     vColor=colorIn; 
+    vStream=0.0;
+    vStreamPhase=0.0;
     vec3 tr=vec3(position);
     float pSz=size;
     vec3 nm=normal;
     vec3 wPos=planePosition;
     wPos.y-=calcWvField(planePosition)*waveNoiseAmplitude;
-    vec3 sNorm=vec3(0.0,0.0,1.0);
-    vec3 sPos=logoPosition;
-    sPos.z+=calcRawNoise(vec3(logoPosition.xy,time*0.03))*0.04;
+    // The hero resolves directly into the embossed version as well. Keeping
+    // the old flat target here was why the first-screen mark looked 2D even
+    // though the later Core Value target had depth.
+    vec3 sNorm=normal;
+    vec3 sPos=calcLogoSingle(sNorm);
     sPos=applyLogoMouseInteraction(sPos);
     vec3 mNorm=normal;
     vec3 mPos=calcLogoSingle(mNorm);
@@ -3067,17 +3206,16 @@ document.addEventListener("DOMContentLoaded", function () {
       float f=pow(smoothstep(animStops[1],animStops[2],morph),13.0);
       tr=mixPoints(sPos,mPos,mPos,f);
       nm=mixPoints(sNorm,mNorm,mNorm,f);
-      pSz=size*0.72;
+      pSz=size*1.19;
     } else if(morph<animStops[3]){
-      float f=pow(smoothstep(animStops[2],animStops[3],morph),13.0);
-      tr=mixPoints(mPos,cPos,dPos,f);
+      float f=smoothstep(animStops[2],animStops[3],morph);
+      tr=calcLogoToRiver(mPos,dPos,f);
       nm=mix(mNorm,dNorm,f);
-      pSz=mix(size*0.72,size*0.68,f);
+      pSz=mix(size*1.19,size*0.68,smoothstep(0.18,0.92,f));
     } else if(morph<animStops[4]){
-      float f=pow(smoothstep(animStops[3],animStops[4],morph),5.0);
-      tr=mixPoints(dPos,cPos,tPos,f);
-      nm=mix(dNorm,tNorm,f);
-      pSz=mix(size*0.68,size*0.64,f);
+      tr=dPos;
+      nm=dNorm;
+      pSz=size*0.66;
     } else if(morph<animStops[7]){
       tr=tPos;
       nm=tNorm;
@@ -3086,11 +3224,11 @@ document.addEventListener("DOMContentLoaded", function () {
       float f=animMrph(smoothstep(animStops[7],animStops[8],morph));
       tr=mixPoints(tPos,cPos,sPos,f);
       nm=mix(tNorm,sNorm,f);
-      pSz=mix(size*0.64,size*0.72,f);
+      pSz=mix(size*0.64,size*1.19,f);
     } else if(morph<animStops[10]){
       tr=sPos;
       nm=sNorm;
-      pSz=size*0.72;
+      pSz=size*1.19;
     } else {
       tr=vec3(1.);
       pSz=0.01;
@@ -3110,11 +3248,35 @@ document.addEventListener("DOMContentLoaded", function () {
     vColor+=mouseLightColor*calcLight(mvP.xyz,oNorm,light,5.0);
     vColor+=lightColor*calcLight(mvP.xyz,oNorm,vec3(0.,-3.,-5.),10.0);
     float logoStage=smoothstep(animStops[0],animStops[1],morph);
+    float auroraIn=smoothstep(animStops[2],animStops[3],morph);
+    float auroraOut=1.0-smoothstep(animStops[7],animStops[8],morph);
+    float auroraStage=auroraIn*auroraOut;
+    float streamParticle=auroraStage;
+    float streamLane=mod(getVId(),5.0);
+    float streamLaneStrength=mix(1.0,0.66,abs(streamLane-2.0)/2.0);
+    vStream=streamParticle;
+    vStreamPhase=fract(
+      floor(getVId()/5.0)/max(1.0,floor(SAMPLES/5.0))+
+      time*0.032
+    );
     float densitySeed=fract(sin(getVId()*12.9898)*43758.5453);
     float brightnessSeed=step(0.7,fract(sin((getVId()+17.0)*78.233)*43758.5453));
-    float logoParticleVisible=step(0.2,densitySeed);
+    float streamDensity=mix(0.045,0.27,streamParticle);
+    float logoParticleVisible=step(streamDensity,densitySeed);
     float logoSheen=calcLogoSheen(logoPosition)*logoStage;
-    float logoTone=mix(0.88,1.0,brightnessSeed);
+    // Shade the transformed depth, not the flat source coordinates. This is
+    // what makes the thickness visible in a straight-on screenshot.
+    float logoFront=smoothstep(0.02,0.31,tr.z);
+    float logoBack=1.0-smoothstep(-0.31,-0.05,tr.z);
+    float logoSide=clamp(1.0-logoFront-logoBack,0.0,1.0);
+    // The sphere-like quality comes from a coherent surface normal field:
+    // particles on folds facing the key light grow brighter and slightly
+    // larger, while particles turning away recede into blue-grey shadow.
+    float membraneFacing=clamp(dot(
+      normalize(oNorm),normalize(vec3(-0.72,0.38,0.58))
+    )*0.5+0.5,0.0,1.0);
+    float membraneLight=mix(0.58,1.20,pow(membraneFacing,1.45));
+    float logoTone=mix(0.90,1.06,brightnessSeed);
     float stageBrightness=1.0;
     if(morph>=animStops[2]&&morph<animStops[3]){
       float stageMix=pow(smoothstep(animStops[2],animStops[3],morph),13.0);
@@ -3129,15 +3291,47 @@ document.addEventListener("DOMContentLoaded", function () {
       stageBrightness=mix(0.95,1.0,stageMix);
     }
     vColor*=mix(1.0,logoTone*stageBrightness,logoStage);
-    vColor+=vec3(0.82,0.88,1.0)*logoSheen*0.72;
+    float depthShade=mix(0.66,1.18,smoothstep(-0.44,0.44,tr.z));
+    float metalRim=pow(1.0-abs(dot(normalize(oNorm),vec3(0.0,0.0,1.0))),2.2);
+    vColor*=mix(1.0,depthShade,logoStage);
+    vec3 faceTone=mix(vec3(0.58,0.65,0.78),vec3(0.94,0.97,1.0),logoFront);
+    faceTone=mix(faceTone,vec3(0.31,0.37,0.50),logoBack);
+    // Use an absolute material ramp rather than multiplying the dark sphere
+    // palette. This preserves white faces and blue-grey sides without bloom.
+    vColor=mix(vColor,faceTone,logoStage*0.78);
+    float logoAngle=atan(logoPosition.y,logoPosition.x);
+    float centreHighlightGuard=smoothstep(0.34,0.82,length(logoPosition.xy));
+    float orbitHighlight=pow(max(0.0,cos(logoAngle-time*0.52)),9.0)*centreHighlightGuard;
+    float travelingHighlight=pow(max(0.0,1.0-abs((logoPosition.x*0.52-logoPosition.y*0.24)-sin(time*0.42)*0.72)),7.0)*centreHighlightGuard;
+    vColor+=vec3(0.72,0.82,1.0)*travelingHighlight*logoFront*logoStage*0.28;
+    vColor+=vec3(0.64,0.74,0.96)*orbitHighlight*logoFront*logoStage*0.20;
+    float auroraSpark=pow(fract(sin((getVId()+time*3.0)*27.17)*43758.5453),10.0);
+    float streamPulse=0.62+0.38*sin(getVId()*0.047-time*2.15);
+    vec3 streamSilver=mix(vec3(0.62,0.70,0.84),vec3(1.22,1.26,1.34),streamPulse);
+    vColor=mix(vColor,streamSilver,streamParticle*0.92);
+    vColor+=vec3(0.86,0.94,1.0)*auroraSpark*streamParticle*0.86;
+    vColor*=mix(1.0,streamLaneStrength,streamParticle);
+    vColor+=vec3(0.52,0.58,0.68)*metalRim*logoStage*0.42;
+    vColor+=vec3(0.82,0.88,1.0)*logoSheen*0.48;
+    // Keep the sculptural logo below the bloom washout threshold so the
+    // middle and rear strata remain legible. The aurora stream keeps its
+    // stronger emission and is intentionally excluded from this limiter.
+    float sculptStage=logoStage*(1.0-streamParticle);
+    vColor*=mix(1.0,membraneLight,sculptStage*0.84);
+    vColor=mix(vColor,min(vColor,vec3(1.04)),sculptStage*0.52);
     float sX=gl_Position.x/gl_Position.w;
     vColor=calcRefl(vColor,sX,tr.z/objectSize.z,tr);
     vec4 mvPos=vec4(tr,1.0);
     mvPos=modelViewMatrix*mvPos;
     gl_Position=projectionMatrix*mvPos;
     gl_PointSize=pSz*mix(1.,fadeOutMaxSize,1.-fadeOut)*modelScale;
-    gl_PointSize*=mix(1.0,0.85*logoParticleVisible,logoStage);
+    gl_PointSize*=mix(1.0,0.92*logoParticleVisible,logoStage);
+    gl_PointSize*=mix(0.80,1.10,logoFront*logoStage);
+    gl_PointSize*=mix(1.0,mix(0.82,1.16,membraneFacing),sculptStage*0.72);
     gl_PointSize*=1.0+logoSheen*0.32;
+    gl_PointSize*=1.0+streamParticle*(0.22+auroraSpark*0.48);
+    gl_PointSize*=mix(1.0,streamLaneStrength,streamParticle);
+    gl_PointSize*=mix(1.0,5.15,glowLayer*streamParticle);
     #ifdef USE_SIZEATTENUATION
       bool isP=checkPersp(projectionMatrix);
       if(isP) gl_PointSize*=(scale/-mvPos.z);
@@ -3149,6 +3343,9 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 <script type="module">
 import * as THREE from "three";
+import { EffectComposer } from "https://unpkg.com/three@0.161.0/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "https://unpkg.com/three@0.161.0/examples/jsm/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "https://unpkg.com/three@0.161.0/examples/jsm/postprocessing/UnrealBloomPass.js";
 
 const isMobile = () => window.innerWidth < 992;
 
@@ -3177,37 +3374,114 @@ async function createLogoPointPositions(count) {
   const padding = 22;
   sampleContext.drawImage(image, padding, padding, sampleSize - padding * 2, sampleSize - padding * 2);
   const pixels = sampleContext.getImageData(0, 0, sampleSize, sampleSize).data;
+  const gridStep = 2;
+  const gridSize = sampleSize / gridStep;
+  const mask = new Uint8Array(gridSize * gridSize);
+  const distance = new Float32Array(gridSize * gridSize).fill(1e6);
   const opaquePoints = [];
+  const boundaryPoints = [];
+  const detailPoints = [];
+  const queue = new Int32Array(gridSize * gridSize);
+  let queueHead = 0;
+  let queueTail = 0;
 
-  for (let y = 0; y < sampleSize; y += 2) {
-    for (let x = 0; x < sampleSize; x += 2) {
-      if (pixels[(y * sampleSize + x) * 4 + 3] > 96) {
-        opaquePoints.push([x, y]);
+  const gridIndex = (x, y) => y * gridSize + x;
+  for (let y = 0; y < gridSize; y++) {
+    for (let x = 0; x < gridSize; x++) {
+      const sx = x * gridStep;
+      const sy = y * gridStep;
+      const idx = gridIndex(x, y);
+      mask[idx] = pixels[(sy * sampleSize + sx) * 4 + 3] > 96 ? 1 : 0;
+    }
+  }
+
+  // Multi-source distance transform. Boundary pixels become the continuous
+  // source for the side wall; the propagated distance controls release order.
+  for (let y = 1; y < gridSize - 1; y++) {
+    for (let x = 1; x < gridSize - 1; x++) {
+      const idx = gridIndex(x, y);
+      if (!mask[idx]) continue;
+      const boundary = !mask[idx - 1] || !mask[idx + 1] ||
+        !mask[idx - gridSize] || !mask[idx + gridSize];
+      if (boundary) {
+        distance[idx] = 0;
+        queue[queueTail++] = idx;
       }
     }
   }
 
+  const neighborOffsets = [-1, 1, -gridSize, gridSize];
+  while (queueHead < queueTail) {
+    const idx = queue[queueHead++];
+    const nextDistance = distance[idx] + 1;
+    for (const offset of neighborOffsets) {
+      const next = idx + offset;
+      if (next < 0 || next >= mask.length || !mask[next] || distance[next] <= nextDistance) continue;
+      distance[next] = nextDistance;
+      queue[queueTail++] = next;
+    }
+  }
+
+  let maxDistance = 1;
+  for (let y = 1; y < gridSize - 1; y++) {
+    for (let x = 1; x < gridSize - 1; x++) {
+      const idx = gridIndex(x, y);
+      if (!mask[idx]) continue;
+      maxDistance = Math.max(maxDistance, distance[idx]);
+      const dx = distance[idx + 1] - distance[idx - 1];
+      const dy = distance[idx + gridSize] - distance[idx - gridSize];
+      const normalLength = Math.hypot(dx, dy) || 1;
+      const point = {
+        x: x * gridStep,
+        y: y * gridStep,
+        distance: distance[idx],
+        // Distance increases inward, so its negative gradient points outward.
+        nx: -dx / normalLength,
+        ny: dy / normalLength
+      };
+      opaquePoints.push(point);
+      if (distance[idx] <= 1) boundaryPoints.push(point);
+      const centerDistance = Math.hypot(x - gridSize * 0.5, y - gridSize * 0.5);
+      // Give the silhouette, cut-outs, and shared centre enough samples so the
+      // logo never appears broken when viewed at an angle.
+      if (distance[idx] <= 2 || centerDistance < gridSize * 0.13) detailPoints.push(point);
+    }
+  }
+
   const positions = new Float32Array(count * 3);
+  const meta = new Float32Array(count * 3);
+  const edges = new Float32Array(count * 2);
+  const golden = 0.6180339887498949;
+
   for (let i = 0; i < count; i++) {
-    const source = opaquePoints[Math.floor(Math.random() * opaquePoints.length)];
-    const jitterX = (Math.random() - 0.5) * 2;
-    const jitterY = (Math.random() - 0.5) * 2;
-    const normalizedX = (source[0] + jitterX) / sampleSize - 0.5;
-    const normalizedY = 0.5 - (source[1] + jitterY) / sampleSize;
-    const radialDepth = 1 - Math.min(1, Math.hypot(normalizedX, normalizedY) * 1.7);
+    const sequence = (i * golden) % 1;
+    const layerChoice = (i % 20) / 20;
+    const isSide = layerChoice >= 0.80;
+    const isBack = !isSide && layerChoice >= 0.70;
+    const useDetail = !isSide && i % 5 === 0 && detailPoints.length > 0;
+    const sourceList = isSide ? boundaryPoints : useDetail ? detailPoints : opaquePoints;
+    const source = sourceList[Math.floor(sequence * sourceList.length) % sourceList.length];
+    const normalizedX = source.x / sampleSize - 0.5;
+    const normalizedY = 0.5 - source.y / sampleSize;
+    const sideDepth = (i * golden * 7.0) % 1;
 
     positions[i * 3] = normalizedX * 4.15;
     positions[i * 3 + 1] = normalizedY * 4.15;
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 0.12 + radialDepth * 0.12;
+    positions[i * 3 + 2] = 0;
+    meta[i * 3] = isSide ? 2 : isBack ? 1 : 0;
+    meta[i * 3 + 1] = sideDepth;
+    meta[i * 3 + 2] = Math.min(1, source.distance / maxDistance);
+    edges[i * 2] = source.nx;
+    edges[i * 2 + 1] = source.ny;
   }
 
-  return positions;
+  return { positions, meta, edges };
 }
 
 const init3dApp = async () => {
-  const POINTS_COUNT = 10000;
+  const POINTS_COUNT = isMobile() ? 5800 : 9000;
   const svhHeight = getSvh();
-  const logoPointPositions = await createLogoPointPositions(POINTS_COUNT);
+  const logoPoints = await createLogoPointPositions(POINTS_COUNT);
 
   function getSphereGeometry() {
     // Создаём BufferGeometry
@@ -3229,7 +3503,9 @@ const init3dApp = async () => {
 
     // Добавляем атрибут в геометрию
     geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    geometry.setAttribute("logoPosition", new THREE.BufferAttribute(logoPointPositions, 3));
+    geometry.setAttribute("logoPosition", new THREE.BufferAttribute(logoPoints.positions, 3));
+    geometry.setAttribute("logoMeta", new THREE.BufferAttribute(logoPoints.meta, 3));
+    geometry.setAttribute("logoEdge", new THREE.BufferAttribute(logoPoints.edges, 2));
     geometry.setAttribute("index", new THREE.BufferAttribute(indexes, 1));
     return geometry;
   }
@@ -3275,7 +3551,7 @@ const init3dApp = async () => {
   canvas.style.transform = "translateY(-50%)";
   canvas.style.transition = "transform 1s ease-in-out";
 
-  const dpr = Math.min(window.devicePixelRatio * 2, 4);
+  const dpr = Math.min(window.devicePixelRatio, isMobile() ? 1.5 : 2);
   const width = (canvas.width = window.innerWidth * 1);
   const height = (canvas.height = svhHeight * 1);
 
@@ -3284,6 +3560,11 @@ const init3dApp = async () => {
     alpha: true,
     powerPreference: "high-performance"
   });
+
+  // Keep the particle layer transparent over one shared dark surface. The
+  // mobile page previously revealed different parent backgrounds whenever the
+  // canvas changed sections, which read as two different shades of black.
+  renderer.setClearColor(0x0d0d0d, 0);
 
   const renderSettings = {
     dpr
@@ -3488,16 +3769,16 @@ const init3dApp = async () => {
   };
 
   class WobblingSphere extends THREE.Points {
-    constructor() {
+    constructor(glowLayer = false) {
       const sphereGeometry = getSphereGeometry();
 
       const pointsMaterial = new THREE.PointsMaterial({
         size: 0.05,
         vertexColors: true,
         transparent: true,
-        depthWrite: false,
+        depthWrite: !glowLayer,
         depthTest: false,
-        blending: THREE.AdditiveBlending
+        blending: glowLayer ? THREE.AdditiveBlending : THREE.NormalBlending
       });
 
       super(sphereGeometry, pointsMaterial);
@@ -3557,7 +3838,8 @@ const init3dApp = async () => {
           value: [widthSegments, heightSegments]
         },
 
-        animStops
+        animStops,
+        glowLayer: { value: glowLayer ? 1 : 0 }
       };
 
       this.material.onBeforeCompile = (shader) => {
@@ -3579,19 +3861,39 @@ const init3dApp = async () => {
                 varying vec3 vColor;
                 varying float fadeOut;
                 varying vec3 vNormal;
+                varying float vStream;
+                varying float vStreamPhase;
+                uniform float glowLayer;
 
                 void main() {
-                    float uvLen = length(gl_PointCoord.xy - 0.5);
-                    if (fadeOut < 0.0 || uvLen > 0.5) discard;
+                    vec2 pointUv = gl_PointCoord.xy - 0.5;
+                    float roundLen = length(pointUv);
+                    float trailLen = length(vec2(pointUv.x * 0.42, pointUv.y));
+                    float shapeLen = mix(roundLen, trailLen, vStream);
+                    if (fadeOut < 0.0 || shapeLen > 0.5) discard;
                     vec4 diffuseColor = vec4( vColor, 1.0 );
                     
-                    float fa = 1. - smoothstep(0.55, 1.0, uvLen);
+                    float roundCore = 1.0 - smoothstep(0.12, 0.50, roundLen);
+                    float trailCore = 1.0 - smoothstep(0.04, 0.34, trailLen);
+                    float trailHalo = 1.0 - smoothstep(0.12, 0.50, trailLen);
+                    float headDistance = abs(vStreamPhase - 0.58);
+                    headDistance = min(headDistance, 1.0 - headDistance);
+                    float movingHead = 0.56 + 1.45 * exp(-headDistance * headDistance * 220.0);
+                    float endpointFade = smoothstep(0.04, 0.22, vStreamPhase) *
+                      (1.0 - smoothstep(0.76, 0.94, vStreamPhase));
+                    float fa = mix(roundCore, trailCore * 0.78 + trailHalo * 0.34, vStream);
+                    float glowMix = glowLayer;
+                    fa = mix(fa, trailHalo * 0.20, glowMix * vStream);
+                    fa *= mix(1.0, endpointFade, vStream);
+                    diffuseColor.rgb *= mix(1.0, 1.28 * movingHead, vStream);
+                    diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.88, 0.94, 1.0), glowMix * vStream * 0.58);
                     float distanceFactor = 1. - smoothstep(0.989, 0.991, gl_FragCoord.z);
 
                     float alpha = fa * (0.25 + 0.75 * pow(fadeOut, 4.)) * distanceFactor;
+                    alpha *= mix(1.0, vStream, glowMix);
 
                     diffuseColor *= alpha;
-                    diffuseColor.a = distanceFactor;
+                    diffuseColor.a = alpha * mix(1.0, 0.44, glowMix);
                 
                     gl_FragColor = diffuseColor;
                 }
@@ -3651,10 +3953,21 @@ const init3dApp = async () => {
   camera.position.y = 0;
   camera.position.z = 7.5;
 
+  const composer = new EffectComposer(renderer);
+  composer.addPass(new RenderPass(scene, camera));
+  const bloomPass = new UnrealBloomPass(
+    new THREE.Vector2(window.innerWidth, svhHeight),
+    0,
+    0.68,
+    0.28
+  );
+  composer.addPass(bloomPass);
+
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / svhHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, svhHeight);
+    composer.setSize(window.innerWidth, svhHeight);
 
     animStops.value = getAnimationBreakpoints();
   });
@@ -3694,6 +4007,13 @@ const init3dApp = async () => {
     spheres.push({
       sphere
     });
+
+    // A second additive particle pass is visible only during the light-river
+    // stage. It supplies the soft white aura without flattening the hero logo.
+    const glowSphere = new WobblingSphere(true);
+    glowSphere.renderOrder = sphere.renderOrder + 1;
+    scene.add(glowSphere);
+    spheres.push({ sphere: glowSphere });
   }
 
   updateSpheresRotation();
@@ -3725,10 +4045,19 @@ const init3dApp = async () => {
       const scale = sphere.getScale();
 
       sphere.scale.set(scale, scale, scale);
+      // Section-specific mobile offsets are applied below and must not leak
+      // into the following particle scenes.
+      sphere.position.y = 0;
     });
 
     if (isMobile()) {
-      const canvasRoot = document.querySelector("#i6j0s7y68_0") || document.querySelector("#i3s7itiep_0");
+      // Phones use one continuous viewport-space visual layer. Copy remains in
+      // the foreground while the particle object itself moves into the lower
+      // visual field. Section edges use a soft mask instead of a hard clip, so
+      // neither a colour seam nor a sudden canvas hand-off is visible.
+      const canvasRoot = document.querySelector("#hero-particle-stage") ||
+        document.querySelector("#i6j0s7y68_0") ||
+        document.querySelector("#i3s7itiep_0");
       if (!canvasRoot) {
         canvas.style.display = "none";
         updateSpheresRotation();
@@ -3736,11 +4065,44 @@ const init3dApp = async () => {
       }
       const canvasRootRect = canvasRoot.getBoundingClientRect();
 
-      const oneTwoThreeAnim = document.querySelector(".one-anim").parentElement;
-      const oneTwoThreeAnimRect = oneTwoThreeAnim.getBoundingClientRect();
+      const setSoftCanvasMask = (visibleTop, visibleBottom, fadeDistance = 84) => {
+        const top = THREE.MathUtils.clamp(visibleTop, 0, svhHeight);
+        const bottom = THREE.MathUtils.clamp(visibleBottom, 0, svhHeight);
+        if (top <= 0 && bottom >= svhHeight) {
+          canvas.style.maskImage = "none";
+          canvas.style.webkitMaskImage = "none";
+          return;
+        }
+
+        const fade = Math.min(fadeDistance, Math.max(0, (bottom - top) * 0.28));
+        const topSolid = Math.min(bottom, top + fade);
+        const bottomSolid = Math.max(topSolid, bottom - fade);
+        const mask = `linear-gradient(to bottom, transparent 0px, transparent ${top}px, black ${topSolid}px, black ${bottomSolid}px, transparent ${bottom}px, transparent 100%)`;
+        canvas.style.maskImage = mask;
+        canvas.style.webkitMaskImage = mask;
+      };
+
+      const coreValueSection = document.querySelector(".one-two-tree-nim");
+      const coreValueStage = document.querySelector("#core-value-particle-stage");
+      const coreValueRect = coreValueSection
+        ? coreValueSection.getBoundingClientRect()
+        : null;
+      const coreValuePrevious = coreValueSection
+        ? coreValueSection.previousElementSibling
+        : null;
+      const coreValuePreviousRect = coreValuePrevious
+        ? coreValuePrevious.getBoundingClientRect()
+        : null;
+      const coreValueIsActive = coreValueRect &&
+        coreValueRect.top < svhHeight * 1.08 &&
+        coreValueRect.bottom > 0;
 
       const aboutAnim = document.querySelector("#ivypdqi2q_0");
       const aboutAnimRect = aboutAnim ? aboutAnim.getBoundingClientRect() : null;
+      const aboutCarousel = document.querySelector("#i2gi3nrun_0");
+      const aboutCarouselRect = aboutCarousel
+        ? aboutCarousel.getBoundingClientRect()
+        : null;
       const aboutNextSection = aboutAnim ? aboutAnim.nextElementSibling : null;
       const aboutNextRect = aboutNextSection ? aboutNextSection.getBoundingClientRect() : null;
       // The rebuilt mobile Ecosystem section can retain source-page height
@@ -3759,14 +4121,24 @@ const init3dApp = async () => {
           document.body.appendChild(canvas);
         }
 
-        // On mobile the particle object follows the viewport while the
-        // Ecosystem section passes behind it. This preserves the original
-        // continuous-canvas feeling without restoring the old 400vh spacer.
+        // Keep the visual continuous through Ecosystem. Its heading and cards
+        // are foreground content; the particle field fades at the actual dark
+        // panel boundaries rather than being cut at their text rectangles.
         canvas.style.position = "fixed";
         canvas.style.top = "0";
         canvas.style.left = "0";
-        canvas.style.zIndex = "1";
+        canvas.style.zIndex = "2";
         canvas.style.pointerEvents = "none";
+        canvas.style.clipPath = "none";
+        canvas.style.webkitClipPath = "none";
+        const ecosystemParticleBottom = aboutCarouselRect
+          ? Math.min(ecosystemVisualBottom, aboutCarouselRect.top)
+          : ecosystemVisualBottom;
+        setSoftCanvasMask(
+          Math.max(0, aboutAnimRect.top),
+          Math.min(svhHeight, ecosystemParticleBottom),
+          svhHeight * 0.09
+        );
 
         const entry = THREE.MathUtils.clamp(
           (svhHeight * 0.72 - aboutAnimRect.top) / (svhHeight * 0.22),
@@ -3780,33 +4152,116 @@ const init3dApp = async () => {
         );
         canvas.style.opacity = String(Math.min(entry, exit));
         canvas.style.display = "block";
+
+        spheres.forEach(({ sphere }) => {
+          const ecosystemScale = sphere.getScale() * 0.7;
+          sphere.scale.set(ecosystemScale, ecosystemScale, ecosystemScale);
+          const ecosystemEntryOffset = THREE.MathUtils.clamp(
+            aboutAnimRect.top / svhHeight,
+            0,
+            0.42
+          );
+          sphere.position.y = -0.95 - ecosystemEntryOffset * 2.8;
+        });
       } else if (aboutAnimRect && ecosystemVisualBottom <= svhHeight * 0.34) {
         // Once Portfolio approaches, fade the global particle layer out so it
         // cannot sit over the following white section.
         canvas.style.opacity = "0";
         canvas.style.display = "none";
-      } else if (oneTwoThreeAnimRect.top - window.innerHeight < window.innerHeight) {
-        if (canvas.parentElement !== oneTwoThreeAnim) {
-          oneTwoThreeAnim.appendChild(canvas);
-
-          canvas.style.position = "absolute";
-          canvas.style.top = `${Math.floor(svhHeight * 0.08)}px`;
-          canvas.style.left = `${-oneTwoThreeAnimRect.left}px`;
-          canvas.style.zIndex = "0";
-          canvas.style.opacity = "1";
-          canvas.style.display = "block";
+        canvas.style.clipPath = "none";
+        canvas.style.webkitClipPath = "none";
+        canvas.style.maskImage = "none";
+        canvas.style.webkitMaskImage = "none";
+      } else if (coreValueIsActive && coreValueStage) {
+        if (canvas.parentElement !== document.body) {
+          document.body.appendChild(canvas);
         }
+
+        // The preceding white card uncovers the same fixed canvas. A soft mask
+        // keeps particles inside the dark story without drawing a horizontal
+        // cut through the page.
+        canvas.style.position = "fixed";
+        canvas.style.top = "0";
+        canvas.style.left = "0";
+        canvas.style.zIndex = "2";
+        canvas.style.opacity = "1";
+        canvas.style.display = "block";
+        canvas.style.pointerEvents = "none";
+        // Include the section's mt_80 transition gap. Using Core Value's own
+        // top left an empty black band between the white card and the first
+        // visible particles; the previous section's bottom is the real visual
+        // reveal edge on mobile.
+        const coreRevealEdge = coreValuePreviousRect
+          ? coreValuePreviousRect.bottom
+          : coreValueRect.top;
+        // Ease the taller rebuilt Logo into its Core Value composition instead
+        // of changing scale and vertical position on the ownership frame.
+        const coreEntryRaw = THREE.MathUtils.clamp(
+          (svhHeight - coreRevealEdge) / (svhHeight * 0.72),
+          0,
+          1
+        );
+        const coreEntry = coreEntryRaw * coreEntryRaw * (3 - 2 * coreEntryRaw);
+        const coreCardRaw = THREE.MathUtils.clamp(
+          (svhHeight * 0.18 - coreValueRect.top) / (svhHeight * 0.42),
+          0,
+          1
+        );
+        const coreCard = coreCardRaw * coreCardRaw * (3 - 2 * coreCardRaw);
+
+        canvas.style.clipPath = "none";
+        canvas.style.webkitClipPath = "none";
+        setSoftCanvasMask(
+          Math.max(0, coreRevealEdge),
+          Math.min(svhHeight, coreValueRect.bottom),
+          svhHeight * 0.11
+        );
+
+        spheres.forEach(({ sphere }) => {
+          // Once the sticky 01–03 cards arrive, move the object into the lower
+          // visual field and slightly reduce it. Positive Three.js Y projects
+          // upward; the previous positive offset caused the overlap seen on
+          // phones, so the card phase deliberately moves in negative Y.
+          const coreScale = sphere.getScale() *
+            (1 - 0.13 * coreEntry - 0.11 * coreCard);
+          sphere.scale.set(coreScale, coreScale, coreScale);
+          sphere.position.y = 0.35 * coreEntry - 2.65 * coreCard;
+        });
+      } else if (coreValueRect && coreValueRect.bottom <= 0) {
+        // Between Core Value and the later Ecosystem particle scene there is
+        // no active visual host. Hide the shared layer after it has been fully
+        // clipped away, rather than teleporting it back into the off-screen
+        // hero stage for one visible frame.
+        canvas.style.opacity = "0";
+        canvas.style.display = "none";
+        canvas.style.clipPath = "none";
+        canvas.style.webkitClipPath = "none";
+        canvas.style.maskImage = "none";
+        canvas.style.webkitMaskImage = "none";
       } else {
         if (canvas.parentElement !== canvasRoot) {
           canvasRoot.appendChild(canvas);
         }
         
         canvas.style.position = "absolute";
+        // Match the source page's mobile composition: the full-viewport
+        // canvas sits slightly above the copy while its dedicated sticky
+        // stage supplies the uninterrupted black background below it.
         canvas.style.top = "-10svh";
         canvas.style.left = `${-canvasRootRect.left}px`;
         canvas.style.zIndex = "0";
         canvas.style.opacity = "1";
         canvas.style.display = "block";
+        canvas.style.clipPath = "none";
+        canvas.style.webkitClipPath = "none";
+        canvas.style.maskImage = "none";
+        canvas.style.webkitMaskImage = "none";
+
+        spheres.forEach(({ sphere }) => {
+          const scale = sphere.getScale();
+          sphere.scale.set(scale, scale, scale);
+          sphere.position.y = 0;
+        });
       }
     }
 
@@ -3815,7 +4270,24 @@ const init3dApp = async () => {
 
   updateMorph();
 
-  window.addEventListener("scroll", updateMorph);
+  let morphFramePending = false;
+  const requestMorphUpdate = () => {
+    if (morphFramePending) return;
+    morphFramePending = true;
+    window.requestAnimationFrame(() => {
+      morphFramePending = false;
+      updateMorph();
+    });
+  };
+  window.addEventListener("scroll", requestMorphUpdate, { passive: true });
+  // Mobile browsers may restore the previous scroll position after the first
+  // synchronous layout pass. Re-run the ownership calculation once the page
+  // has settled so a direct refresh inside Ecosystem cannot leave the shared
+  // canvas attached to its old section.
+  window.addEventListener("pageshow", requestMorphUpdate);
+  window.requestAnimationFrame(updateMorph);
+  window.setTimeout(requestMorphUpdate, 240);
+  window.setTimeout(requestMorphUpdate, 1200);
 
   let renderIsPaused = false;
 
@@ -3861,7 +4333,18 @@ const init3dApp = async () => {
 
     updateSpheresRotation();
 
-    renderer.render(scene, camera);
+    const stops = animStops.value;
+    const scrollMorph = gu.planeToSphereMorph.value;
+    const bloomIn = THREE.MathUtils.smoothstep(scrollMorph, stops[2], stops[3]);
+    const bloomOut = 1 - THREE.MathUtils.smoothstep(scrollMorph, stops[7], stops[8]);
+    const streamBloom = bloomIn * bloomOut;
+    // The additive copy is useful only while the river is visible. Skipping
+    // its draw call elsewhere removes half of the logo-stage vertex work.
+    if (spheres[1]) spheres[1].sphere.visible = streamBloom > 0.012;
+    bloomPass.strength = streamBloom * 0.82;
+    bloomPass.radius = 0.54 + streamBloom * 0.16;
+    bloomPass.threshold = 0.34 - streamBloom * 0.18;
+    composer.render();
   }
 
   renderer.compileAsync(scene, camera).then(() => {
@@ -4162,8 +4645,7 @@ setTimeout(
 <script src="my/s3/js/site.min.js?1776070719" ></script>
 <script src="service-scope.js"></script>
 <script src="faq-redesign.js?v=19"></script>
-<script src="ecosystem-logos.js?v=3"></script>
-<script src="industry-report.js?v=2"></script>
+<script src="ecosystem-logos.js?v=4"></script>
 <script src="mobile-fixes.js?v=4"></script>
 <script >/*<![CDATA[*/
 </script>
