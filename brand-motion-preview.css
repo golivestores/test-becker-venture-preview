@@ -57,8 +57,9 @@
   position: absolute;
   inset: 0;
   opacity: 0;
+  background-color: transparent;
   background: url('thumb/2/osNaWl5gqHqzKPHUJBImgA/640r480/d/logo.svg') center / contain no-repeat;
-  filter: drop-shadow(0 0 1.8rem rgba(238, 238, 238, .16));
+  filter: none;
   will-change: transform, opacity;
 }
 
