@@ -3,7 +3,7 @@
 
   function enhanceCtas() {
     document.querySelectorAll('.btn-black, .btn-white').forEach(function (cta) {
-      if (cta.matches('.submit_button, button[type="submit"], .bv-portfolio-link')) return;
+      if (cta.matches('.bv-portfolio-link')) return;
 
       var main = cta.querySelector(
         '.btn-black_main, .btn-black--docs_main, .btn-white_main, .btn-white_stroke'
