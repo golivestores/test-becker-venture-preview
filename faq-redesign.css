@@ -37,6 +37,13 @@
 #ixbk8xix1_0 .faq-ticker-scrubber:focus-visible{outline:1px solid #e55224;outline-offset:.4rem}
 @keyframes faqPulse{50%{opacity:.25;transform:scale(.7)}}
 
+@media(min-width:480px){
+#ixbk8xix1_0.faq-carousel-scope #i3d8wnzgd_0{min-height:auto;row-gap:8rem}
+#ixbk8xix1_0.faq-carousel-scope #iybmor7yj_0{top:22.8rem}
+#ixbk8xix1_0.faq-carousel-scope #i1c7plouw_0{margin-top:0}
+#ixbk8xix1_0 .faq-ticker-shell{margin-bottom:-7rem;transform:translateY(-7rem)}
+}
+
 @media(max-width:991px){#ixbk8xix1_0.faq-carousel-scope #i3d2rfxt1_0{font-size:1.65rem!important}#ixbk8xix1_0 .faq-ticker-card{flex-basis:58vw}#ixbk8xix1_0 .faq-ticker-card__question{font-size:1.9rem}#ixbk8xix1_0 .faq-ticker-card__answer{font-size:1.55rem}}
 @media(max-width:479px){
 #ixbk8xix1_0.faq-carousel-scope #i3d8wnzgd_0{min-height:auto!important}

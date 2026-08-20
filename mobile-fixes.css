@@ -1,6 +1,6 @@
 /* Small-screen layout and typography adjustments. */
 @media (max-width: 600px) {
-  /* Services: keep the module count on one line and put the scope link below. */
+  /* Services: keep the module count on one line. */
   #i16lv2od1_0 #i2q7m5357_0 {
     grid-column: 1 / -1;
     width: max-content;
@@ -9,15 +9,6 @@
 
   #i16lv2od1_0 #i2q7m5357_0 .text-block-wrap-div {
     white-space: nowrap;
-  }
-
-  #i16lv2od1_0 #scope-trigger {
-    position: relative;
-    inset: auto;
-    grid-column: 1 / -1;
-    grid-row: 3;
-    justify-self: start;
-    margin-top: 1.4rem;
   }
 
   /* Keep the original service information on phones. The old mobile override

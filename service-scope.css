@@ -3,6 +3,11 @@
 @media(max-width:700px){.scope-trigger{left:1.2rem;top:10.5rem;font-size:.9rem;line-height:2.4rem}.scope-trigger__icon{width:2rem;height:2rem}.scope-modal__panel{inset:0;width:100vw}.scope-modal__header{padding:1.4rem}.scope-modal__header h2{margin-top:5rem;font-size:4.5rem}.scope-modal__header>p{font-size:.9rem}.scope-modal__content{grid-template-columns:1fr}.scope-module{grid-template-columns:3.2rem 1fr;min-height:auto;padding:2.2rem 1.4rem;border-right:0}.scope-module h3{font-size:1.65rem}.scope-module li{font-size:.82rem}.scope-modal__footer{align-items:flex-start;gap:2rem;padding:1.4rem;flex-direction:column}.scope-modal__footer a{width:100%;justify-content:space-between;box-sizing:border-box}}
 @media(prefers-reduced-motion:reduce){.scope-modal__panel,.scope-modal__backdrop{animation:none}.scope-trigger__icon{transition:none}}
 @media(min-width:992px){.scope-trigger{top:20rem}}
+
+/* Services CTA: reuse the original bottom-right black button for the scope dialog. */
+.services-module-count{transform:translateY(1.5rem)}
+.service-scope-cta{margin:0;padding:0;border:0;font:inherit;text-align:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}
+.service-scope-cta:focus-visible{outline:2px solid #111;outline-offset:4px}
 .scope-modal__panel{-webkit-overflow-scrolling:touch;touch-action:pan-y}
 
 /* Larger service-scope typography for comfortable reading. */
